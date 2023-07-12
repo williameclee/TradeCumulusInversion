@@ -6,7 +6,7 @@ SRC2 = shader.f limits.f cspack.f drawcl.f pltpl.f \
 SINGLE_OR_DOUBLE         = "double precision"
 #SINGLE_OR_DOUBLE        = "real"
 
-FC = ncargcc
+FC = ncargf90
 CPPFLAGS = -DSINGLE_OR_DOUBLE=$(SINGLE_OR_DOUBLE)
 OBJ =	$(SRC1:.F=.o)  $(SRC2:.f=.o)
 
