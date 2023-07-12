@@ -1,7 +1,7 @@
       subroutine intdde( method, n, h, u0, f, u )
 c
       integer  method, n
-      SINGLE_OR_DOUBLE h, u0, f(0:n), u(0:n)
+      real h, u0, f(0:n), u(0:n)
 c
 c=======================================================================
 c intdde                                             Rick Taft, 4-1-1992

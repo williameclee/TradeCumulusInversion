@@ -9,22 +9,22 @@ c
       parameter (jc = 81, jt=2*jc-1, jl=60)
       integer  jm, jp, j, k, iter, nmax, n, ks, kp, km, itr
       integer  nn, inc, jump, js, mm, nup, niter, method
-      SINGLE_OR_DOUBLE  x(-jc+1:jc-1,-1:kcp), l(-jc+1:jc-1,0:kc)
-      SINGLE_OR_DOUBLE  d(-jc+1:jc-1,0:kc), u(-jc+1:jc-1,0:kc)
-      SINGLE_OR_DOUBLE  g(-jc+1:jc-1,0:kc), phid(-jc:jc)
-      SINGLE_OR_DOUBLE  sc(-jc:jc), scs(-jc:jc)
-      SINGLE_OR_DOUBLE  fac1(-jc:jc), f1(-jc:jc)
-      SINGLE_OR_DOUBLE  z(0:kc), theta(0:kc), pres(-jc:jc,0:kc)
-      SINGLE_OR_DOUBLE  gamma(-jc:jc,0:kc), sigma(-jc:jc,0:kc)
-      SINGLE_OR_DOUBLE  cs, eps, ae, pt, pb, sigma0, avepb 
-      SINGLE_OR_DOUBLE  r, gr, omega, rom, cp, kappa, avep, dif
-      SINGLE_OR_DOUBLE  pi, pid2, sqpi, dz, tdz, dt, alpha, beta
-      SINGLE_OR_DOUBLE  convd, convr, sum
-      SINGLE_OR_DOUBLE  xjs, fj, dj, dsc, rn, refp(0:kc)
-      SINGLE_OR_DOUBLE  dxds, dxdz2, f2, f3, f4, term2
-      SINGLE_OR_DOUBLE  xold, fac2, gkp, gkpp, xs, xsp, xsm, term3
-      SINGLE_OR_DOUBLE  gkm, gkmp, dmz, pie, phimax, phimin
-      SINGLE_OR_DOUBLE  t1, t2, ftmp(0:kc), xtmp(0:kc)
+      real  x(-jc+1:jc-1,-1:kcp), l(-jc+1:jc-1,0:kc)
+      real  d(-jc+1:jc-1,0:kc), u(-jc+1:jc-1,0:kc)
+      real  g(-jc+1:jc-1,0:kc), phid(-jc:jc)
+      real  sc(-jc:jc), scs(-jc:jc)
+      real  fac1(-jc:jc), f1(-jc:jc)
+      real  z(0:kc), theta(0:kc), pres(-jc:jc,0:kc)
+      real  gamma(-jc:jc,0:kc), sigma(-jc:jc,0:kc)
+      real  cs, eps, ae, pt, pb, sigma0, avepb 
+      real  r, gr, omega, rom, cp, kappa, avep, dif
+      real  pi, pid2, sqpi, dz, tdz, dt, alpha, beta
+      real  convd, convr, sum
+      real  xjs, fj, dj, dsc, rn, refp(0:kc)
+      real  dxds, dxdz2, f2, f3, f4, term2
+      real  xold, fac2, gkp, gkpp, xs, xsp, xsm, term3
+      real  gkm, gkmp, dmz, pie, phimax, phimin
+      real  t1, t2, ftmp(0:kc), xtmp(0:kc)
       real              theta10, thetac, theta1(-jc:jc), theta2(-jc:jc)
       real              tm, tp, dfdt, fphi, fthet, tinc, fm, fp
       real              thetab, thetat, dp, phis, phin, phic
@@ -566,8 +566,8 @@ c
       parameter (nwk=2*(jc+1))
       integer  j, k, jm, jp, jd2
 c
-      SINGLE_OR_DOUBLE x(-jc+1:jc-1,-1:kcp), sc(-jc:jc)
-      SINGLE_OR_DOUBLE plm, plp, convd, theta(0:kc)
+      real x(-jc+1:jc-1,-1:kcp), sc(-jc:jc)
+      real plm, plp, convd, theta(0:kc)
       real  plat(-jc2:jc2,0:kc), lat(-jl:jl), dx(-jc2:jc2)
       real  pllat(-jc2:jc2), wk(nwk)
 c     real  tht(-jl:jl,0:kc)
@@ -625,7 +625,7 @@ c
 c
 c   routine to plot parcel trajectories
 c
-      SINGLE_OR_DOUBLE phimin, phimax
+      real phimin, phimax
       integer kinc, jinc, j, k, n, js
       integer kumx, kumy
       real  x(0:1), y(0:1)

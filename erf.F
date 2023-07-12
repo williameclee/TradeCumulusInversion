@@ -1,5 +1,5 @@
       function erf( x )
-      SINGLE_OR_DOUBLE erf, erfc, x
+      real erf, erfc, x
 c
 c   returns the value of the error function  erf(x)
 c
@@ -9,7 +9,7 @@ c
 c   written by Scott R. Fulton  (07/20/87)
 c   modified to avoid underflow (06/18/90)
 c
-      SINGLE_OR_DOUBLE  p, a1, a2, a3, a4, a5, t
+      real  p, a1, a2, a3, a4, a5, t
       save              p, a1, a2, a3, a4, a5
       data              p  /  0.3275911   /
       data              a1 /  0.254829592 /

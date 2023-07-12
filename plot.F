@@ -8,12 +8,12 @@
       integer  jm, jp, km, kp, jpt
       character time*(*)
 c
-      SINGLE_OR_DOUBLE x(-jc+1:jc-1,-1:kcp), theta(0:kc), z(0:kc)
-      SINGLE_OR_DOUBLE scs(-jc:jc), sc(-jc:jc), sigma(-jc:jc,0:kc)
-      SINGLE_OR_DOUBLE phimin, phimax, scmin, scmax, pie
-      SINGLE_OR_DOUBLE kappa, alpha, tdz, pb, pt, omega, ae, convr
-      SINGLE_OR_DOUBLE plm, plp, sls, up, um, dx
-      SINGLE_OR_DOUBLE cs, cp, gr
+      real x(-jc+1:jc-1,-1:kcp), theta(0:kc), z(0:kc)
+      real scs(-jc:jc), sc(-jc:jc), sigma(-jc:jc,0:kc)
+      real phimin, phimax, scmin, scmax, pie
+      real kappa, alpha, tdz, pb, pt, omega, ae, convr
+      real plm, plp, sls, up, um, dx
+      real cs, cp, gr
       real  zetk, sj, cj, cjp, cjm    
       real  plat(-jc2:jc2,0:kc), dp(-jc2:jc2), lat(-jl:jl)
       real  u(-jc2:jc2,0:kc), p(-jc2:jc2,0:kc)

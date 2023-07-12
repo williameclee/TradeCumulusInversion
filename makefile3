@@ -1,4 +1,4 @@
-SRC1 = invtci.F gtm.F plot.F limits.F intdde.F 
+SRC1 = invtci3.F gtm.F plot.F limits.F intdde.F 
 
 SRC2 = shader.f limits.f cspack.f drawcl.f pltpl.f \
        pltl.f pltlp.f fexp.f drwvec.f
@@ -15,7 +15,7 @@ GLIBsmooth = -lplotf -dashsmooth
 
 FFLAGS = -u
 
-invtc: $(OBJ)
+invtc3: $(OBJ)
 	ncargf77 $(OBJ) $(FFLAGS) $(LIBS) $(GLIBsmooth) -o $@
 
 .F.f :
@@ -26,7 +26,7 @@ inv.f : $(SRC1) $(SRC2)
 	/lib/cpp -C -P $(CPPFLAGS) temp $@
 	rm temp
 
-invtci.f : invtci.F
+invtci3.f : invtci3.F
 
 intdde.f : intdde.F
 

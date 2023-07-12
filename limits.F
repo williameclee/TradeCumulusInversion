@@ -3,7 +3,7 @@ c
 c   compute grid point limits (i.e., jmin, jmax) for potential latitude
 c   plots
 c
-      SINGLE_OR_DOUBLE sc(-jc:jc), scmin, scmax, convr, snmin, dif
+      real sc(-jc:jc), scmin, scmax, convr, snmin, dif
       integer   jmin, jmax, jplt, jc, j
       snmin = 2.
       do 40 j=-jc,jc
