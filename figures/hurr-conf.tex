@@ -1,0 +1,1025 @@
+\documentstyle[twocolumn,epsf]{amsconf}
+%\input epsf
+\setlength{\textwidth}{165mm}
+\parindent.5in
+\columnsep13mm
+\setlength{\textheight}{9.0in}
+\setlength{\hoffset}{-.450in}
+\pagestyle{empty}
+\setlength{\voffset}{-.9in}          
+\widowpenalty10000 
+\clubpenalty150
+\begin{document}
+\def \0degC{0$^\circ$C}
+\def\jas{{\it J. Atmos. Sci.}, $\;\;$}
+\def\mwr{{\it Mon. Wea. Rev.}, $\;\;$}
+\def\qjrms{{\it Quart. J. Roy. Meteorol. Soc.}, $\;\;$}
+\def\vol #1 {{\bf #1}, $\;\;$}
+\baselineskip4.25mm
+\title{\begin{flushleft} {\bf 14A.1} \end{flushleft} \vskip -0.20truein 
+DYNAMICAL ADJUSTMENT OF THE TRADE WIND INVERSION LAYER}
+\author{Wayne H. Schubert\thanks{Corresponding Author address:  Wayne Schubert, 
+Department of Atmospheric Sciences, Colorado State University, Fort Collins, CO  80523}, 
+Paul E. Ciesielski, and Richard H. Johnson\\
+\\
+Colorado State University\\
+Fort Collins, Colorado}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\section{INTRODUCTION}
+
+     Most of the latent heat release and rising motion of the tropical
+atmosphere occurs in the ITCZ and its associated wave disturbances.  The area
+involved in this rising motion is a small percentage of the total area of the
+tropics.  Most of the tropical/subtropical region is under the influence of
+subsidence.  In the subsidence regions stratocumulus and shallow cumulus
+convection is capped by the stable trade-wind inversion. As is
+often done, we use the term ``inversion" in a generic sense to include
+not only layers in which $\partial T/\partial z > 0$, but also layers of
+enhanced stability in which $\partial T/\partial z$ is slightly negative.
+
+In schematic north-south cross sections the trade inversion layer is
+often depicted as sloping upward as air flows toward the ITCZ.  This
+conceptual view is consistent with {\it purely thermodynamic} boundary layer
+models, which predict a deeper boundary layer with increasing sea-surface
+temperature and decreasing large-scale subsidence.  The slopes implied by such
+thermodynamic models and incorporated into schematic diagrams are
+approximately
+1500 m/1000 km.  In contrast, observational studies of the inversion structure
+over the Atlantic and Pacific reveal a less dramatic slope, on the order of
+250 m/1000 km.  
+
+To address this inconsistency, we adopt a somewhat different
+view of the trade inversion layer.  In particular, rather than regarding it as
+a purely thermodynamic structure, we regard it as a dynamical structure.  By
+formulating a generalization of the Rossby adjustment problem, we investigate
+the dynamical adjustments of a trade-wind inversion layer of variable strength
+and depth.  From the solution of the adjustment problem there emerges the
+notion that the subtropics control the inversion structure in the tropics,
+i.e., that the subtropical inversion height is dynamically extended into the
+tropics in such a way that there is little variation in the depth of the
+boundary layer.
+
+\section{OBSERVATIONAL STUDIES}
+
+\begin{figure}[t]
+
+\centerline{
+\epsfxsize=2.9 in
+\epsfysize=2.9 in
+\epsffile{fig1.eps}}
+
+\caption{Cumulative frequency (percent) of lapse rates greater than $-4$ K
+km$^{-1}$ (solid), $0$ K km$^{-1}$ (dashed) and $4$ K km$^{-1}$
+(dotted) at Porto Santo Island (33.1$^\circ$N, 16.3$^\circ$W.)}
+
+\end{figure}
+
+\begin{figure}[t]
+
+\centerline{
+\epsfxsize=2.9 in
+\epsfysize=2.9 in
+\epsffile{fig2.eps}}
+
+\caption{Cumulative frequency (percent) of lapse rates greater than $-4$ K
+km$^{-1}$ (solid), $0$ K km$^{-1}$ (dashed) and $4$ K km$^{-1}$
+(dotted) for San Nicolas Island ($33.3^\circ$N, $119.6^\circ$W).}
+
+\end{figure}
+
+\begin{figure}[t]
+
+\centerline{
+\epsfxsize=2.9 in
+\epsfysize=2.9 in
+\epsffile{fig3.eps}}
+
+\caption{Cumulative frequency (percent) of lapse rates greater than $-4$ K
+km$^{-1}$ (solid), $0$ K km$^{-1}$ (dashed) and $4$ K km$^{-1}$
+(dotted) for Kwajelein (8.7N, $167.7^\circ$E).}
+
+\end{figure}
+
+Figure 1 shows the frequency of trade inversions at the subtropical 
+station Porto Santo, where the cloudiness is a mixture of stratocumulus and shallow
+cumulus. This
+figure is based on 203 high vertical resolution (10--15 m) radiosonde
+soundings taken between 1 and 28 June 1992.  
+These diagrams indicate that the
+most probable trade inversion height at Porto Santo is slightly below the 800
+mb ($\approx 2000$ m)  level, with a tendency for the stronger inversions to
+be somewhat lower and near 850 mb ($\approx 1500$ m).
+For comparison the same analysis was performed on 70 high resolution
+radiosonde soundings taken between 30 June and 20 July 1987 at 
+San Nicolas Island.  The results of
+this analysis are shown in Fig.~2.  At San Nicolas the sea surface is colder
+and the mean divergence is larger than at Porto Santo, resulting in a
+persistent stratocumulus regime rather than the mixed stratocumulus/shallow
+cumulus regime observed at Porto Santo.  Note that the inversions at San
+Nicolas tend to be lower and stronger than those at Porto Santo.  For example,
+at San Nicolas the highest probability of strong inversions
+($\partial T/\partial z > 4.0$ K km$^{-1}$) occurs at 915 mb ($\approx 850$ m)
+and is 24\%, while at Porto Santo the highest probability of strong inversions
+occurs at 860 mb ($\approx 1400$ m) and is 15\%.
+
+     Evidence concerning the large-scale structure of the trade-wind boundary
+layer has been slowly accumulating for much of this century.  Some of the
+earliest data was acquired from the 1925--27 expedition of the German research
+vessel Meteor I.  During this expedition, 217 kite soundings of the Atlantic
+trade-wind boundary layer were obtained.  Based on this data, von Ficker
+(1936) produced the first map of the height of the trade-wind inversion base
+over the Atlantic.  This map (not shown), which can be regarded as typical of the
+northern summer, depicts low inversions over the cold ocean currents near
+northwest and southwest Africa.  These two regions of low inversions are
+similar in many respects to San Nicolas Island.  Also shown in von Ficker's map
+is a fairly
+flat inversion at approximately 2000 m over much of the equatorial region.
+Later Atlantic observations support the general picture given by von Ficker.
+
+     Gutnick (1958) extended the study of the trade-wind inversion into the
+Caribbean by analyzing three years of radiosonde soundings for six stations
+(approximately 3800 total soundings). His analysis reveals a trade-wind inversion base at
+approximately 2200 m over the Caribbean, with a gentle upward slope
+($\approx$ 250 m/1000 km) toward the equator.
+
+     A depiction of the trade-wind inversion structure over the tropical
+eastern Pacific was provided by Firestone and Albrecht (1986) and Betts and
+Albrecht (1987), who analyzed dropwindsonde data from approximately 900
+soundings made on flights between Hawaii and the equator during the first
+special observing period (15 January to 20 February 1979) of FGGE. 
+An important conclusion of this work was that there is only a
+slight increase in the height of the trade inversion ($\approx$ 300 m/1000 km)
+toward the equator over the eastern Pacific.
+
+     In an extension of the previous two studies, Kloesel and Albrecht (1989) 
+analyzed additional dropwindsonde soundings made on flights south of Acapulco
+and southwest of the Panama Canal Zone during the second special observing
+period (10 May to 8 June 1979) of FGGE.  Based on this extended data set,
+Kloesel and Albrecht concluded that the trade inversion height tends to be
+uniform over the entire tropical eastern Pacific from 5$^\circ$S to
+15$^\circ$N and from 90$^\circ$W to 170$^\circ$E. 
+
+    Preliminary analysis of TOGA/COARE sounding data has shown
+that trade-wind inversion heights over the
+western Pacific tend to be horizontally uniform and near 800 mb, just as in
+the eastern Pacific and in the Atlantic.  For example, Fig.~3 shows
+the results of a statistical analysis of 125 soundings made from Kwajelein
+at 00 UTC during November 1992--February 1993. 
+The lapse rate statistics for Kwajelein are similar to those at Porto Santo
+(Fig.~1) with a most probable inversion height of 800 mb.
+
+\section{PREVIOUS THEORETICAL STUDIES}
+ 
+     Two theoretical views of the trade inversion are as follows.  The first
+(e.g., Lilly 1968) considers the
+trade inversion as a pure thermodynamical phenomenon which can be modeled
+using steady state, horizontally homogeneous assumptions. In such
+one-dimensional thermodynamic models of stratocumulus and shallow cumulus the
+equilibrium trade wind boundary layer depth is determined by a balance between
+the radiative and moist convective processes tending to deepen the layer and
+the large-scale subsidence tending to shallow the layer. This view leads to
+the notion that the boundary layer depth and thermodynamic structure are
+controlled by local values of sea surface temperature and large-scale
+divergence.  
+
+The second view (e.g., Albrecht 1984) also
+involves pure thermodynamical, steady state arguments, but recognizes the
+importance of horizontal inhomogeneities.  In this view, horizontal advection
+is important and entrainment can occur not only by large-scale subsidence but
+also by horizontal flow across a sloping inversion.  This view leads to the
+notion that the boundary layer depth and thermodynamic structure are
+controlled by a weighted average of the sea surface temperature and
+large-scale divergence upstream along the trajectory.  Both of these views 
+predict a deepening boundary layer along trajectories moving toward the ITCZ
+over increasing sea surface temperature and decreasing large-scale subsidence.
+ In possession of concepts like these, it is natural to construct schematic
+cross sections which depict the trade inversion
+as sloping upward from very near the sea surface in the subtropics to the
+midtroposphere near the edge of the ITCZ.  The slopes implied by such
+thermodynamic models and incorporated into schematic diagrams are
+approximately 1500 m/1000 km, in contrast to observed values of 250 m/1000 km.
+
+\section {DYNAMICAL/THERMODYNAMICAL APPROACH}
+
+     In an effort to understand why the observed trade-wind inversion layer is
+so flat compared to the predictions of pure thermodynamic models, we shall
+adopt a third view, one that involves combined dynamical/thermodynamical
+arguments. Thus, let us consider the following problem.  If thermodynamic
+processes tend to deepen the trade-wind boundary layer toward the equator,
+will dynamical adjustment processes oppose this effect and restore a nearly
+flat trade wind inversion height?  We can think of this as a generalized
+version of the classic Rossby adjustment problem.  At the conference 
+we will present the results of idealized experiments which illustrate two
+concepts---the dynamical extension of subtropical inversions into the tropics
+and the dynamical adjustment of sloping trade-wind inversion layers.  
+
+Model results indicate that the trade inversion layer is strongly
+coupled horizontally.  Rapid variations in trade inversion height are
+dynamically smoothed.  In this way, the trade inversion height is controlled
+by horizontally averaged (over a Rossby length or more) values of the
+sea-surface temperature, divergence and above-inversion atmospheric structure.
+
+\section{ACKNOWLEDGEMENTS} 
+
+This research has been supported by the Office of Naval Research under  
+grant N00014-91-J-1422.
+
+\section{REFERENCES}
+
+\begin{references}
+
+%Albrecht, B. A., 1979:  A model for the thermodynamic structure of the
+%trade-wind booundary layer. II: Applications.  {\sl J.\ Atmos.\ Sci.},
+%{\bf 36}, 90--98.
+
+%Albrecht, B. A., 1981:  Parameterization of trade-cumulus cloud amount. 
+%{\sl J.\ Atmos.\ Sci.}, {\bf 38}, 73--89.
+
+Albrecht, B. A., 1984:  A model study of downstream variations of the
+thermodynamic structure of the trade winds.  {\sl Tellus},
+{\bf 36A}, 187--202.
+
+%Albrecht, B. A., A. K. Betts, W. H. Schubert and S. K. Cox, 1979:  A model for
+%the thermodynamic structure of the trade-wind boundary layer. I: Theoretical
+%formulation and sensitivity tests.  {\sl J.\ Atmos.\ Sci.},
+%{\bf 36}, 73--89.
+
+%Betts, A. K., 1973: Nonprecipitating cumulus convection and its
+%parameterization. {\sl Quart.\ J.\ Roy.\ Meteor.\ Soc.}, {\bf 99}, 178--196.
+
+Betts, A. K., and B. A. Albrecht, 1987:  Conserved variable analysis of the
+convective boundary layer thermodynamic structure over the tropical oceans. 
+{\sl J.\ Atmos.\ Sci.}, {\bf 44}, 83--99.
+
+%Bretherton, C. S., 1993:  Understanding Albrecht's model of trade cumulus
+%cloud fields.  {\sl J.\ Atmos.\ Sci.}, {\bf 50}, 2264--2283.
+
+%Charney, J. G., and M. E. Stern, 1962:  On the stability of internal
+%baroclinic jets in a rotating atmosphere.  {\sl J. Atmos.\ Sci.}, {\bf 19},
+%159--172.
+
+%Eliassen, A., 1983: The Charney--Stern theorem on barotropic-baroclinic
+%instability.  {\sl Pure Appl.\ Geophys.}, {\bf 121}, 563--572.
+
+Ficker, H. von, 1936: Die passatinversion. {\sl Ver\"of.\ des Meteor.\ Inst.\
+der Univ.\ Berlin}, {\bf 1}, No.~4.
+
+Firestone, J. K., and B. A. Albrecht, 1986:  The structure of the atmospheric
+boundary layer in the central equatorial Pacific during January and February
+of FGGE.  {\sl Mon.\ Wea.\ Rev.}, {\bf 114}, 2219--2231.
+
+Gutnick, M., 1958: Climatology of the trade-wind inversion in the Caribbean.
+{\sl Bull.\ Amer.\ Meteor.\ Soc.}, {\bf 39}, 410--420.
+
+%Gutzler, D. S., 1993: Uncertainties in climatological tropical humidity %profiles: Some implications for estimating the greenhouse effect. {\sl J.\ %Climate}, {\bf 6}, 978--982.
+
+%Hack, J. J., and W. H. Schubert, 1990:  Some dynamical properties of idealized
+%thermally-forced meridional circulations in the tropics.  {\sl Meteorology and
+%Atmospheric Physics}, {\bf 44}, 101--117.
+
+%Hack, J. J.,  W. H. Schubert, D. E. Stevens and H.-C. Kuo, 1989:  Response of
+%the Hadley circulation to convective forcing in the ITCZ.
+%{\sl J.\ Atmos.\ Sci.}, {\bf 46}, 2957--2973.
+
+%Haraguchi, P. Y., 1968: Inversions over the tropical eastern Pacific Ocean.
+%{\sl Mon.\ Wea.\ Rev.}, {\bf 96}, 177--185.
+
+%Holland, J. Z., and E. M. Rasmusson, 1973:  Measurements of the atmospheric
+%mass, energy, and momentum budgets over a 500-kilometer square of tropical
+%ocean.  {\sl Mon.\ Wea.\ Rev.}, {\bf 101}, 44--55.
+
+%Hoskins, B. J., M. E. McIntyre and A. W. Robertson, 1985: On the use and
+%significance of isentropic potential vorticity maps.
+%{\sl Quart.\ J.\ R.\ Met.\ Soc.}, {\bf 111}, 877--946.
+
+%Johnson, R. H., 1993:  Midlatitude convective systems.  NCAR Colloquium on %Clouds and Climate.
+
+%Johnson, R. H., J. F. Bresch, P. E. Ciesielski and W. A. Gallus, 1993: The
+%TOGA/COARE atmospheric sounding array: Its performance and preliminary
+%scientific results.  Preprints of the 20$^{\rm th}$ Conference on Hurricanes
+%and Tropical Meteorology, San Antonio, Texas, Amer.\ Meteor.\ Soc., 1--4.
+
+Kloesel, K. A., and B. A. Albrecht, 1989:  Low-level inversions over the
+tropical Pacific---ther\-mo\-dy\-nam\-ic structure of the boundary layer and
+the above-inversion moisture structure. {\sl Mon.\ Wea.\ Rev.}, {\bf 117},
+87--101.
+
+Lilly, D. K., 1968:  Models of cloud-topped mixed layers under a strong
+inversion. {\sl Quart.\ J.\ Roy.\ Meteor.\ Soc.}, {\bf 94}, 292--309.
+
+%Magnusdottir, G., and W. H. Schubert, 1991:  Semigeostrophic theory on the
+%hemisphere. {\sl J. Atmos.\ Sci.}, {\bf 48}, 1449--1456.
+
+%Nitta, T., and S. Esbensen, 1974: Heat and moisture budget analyses using
+%BOMEX data.  {\sl Mon.\ Wea.\ Rev.}, {\bf 102}, 17--28.
+
+%Ramage, C. S., S. J. S. Khalsa and B. N. Meisner, 1981:  The central Pacific
+%near-equatorial convergence zone. {\sl J.\ Geophys.\ Res.}, {\bf 86},
+%6580--6598.
+
+%Randall, D. A., 1980: Entrainment into a stratocumulus layer with distributed
+%radiative cooling. {\sl J. Atmos.\ Sci.}, {\bf 37}, 148--159.
+
+%Rogers, R. R., W. L. Ecklund, D. A. Carter, K. S. Gage and S. A. Ethier, 1993:
+% Research applications of a boundary-layer wind profiler. {\sl Bull.\ Amer.\ 
+%Meteor.\ Soc.}, {\bf 74}, 567--580.
+
+%Sarachik, E. S., 1985: A simple theory for the vertical structure of the
+%tropical atmosphere. {\sl PAGEOPH}, {\bf 123}, 261--271.
+
+%Schubert, W. H., P. E. Ciesielski, D. E. Stevens and H.-C. Kuo, 1991:
+%Potential vorticity modeling of the ITCZ and the Hadley circulation.
+%{\sl J. Atmos.\ Sci.}, {\bf 48}, 1493--1509.
+
+%Schubert, W. H., P. E. Ciesielski, T. B. McKee, J. D. Kleist, S. K. Cox, C. M.
+%Johnson-Pasqua, and W. L. Smith Jr., 1987:  Analysis of Boundary Layer
+%Sounding Data from the FIRE Marine Stratocumulus Project. Colorado State
+%University, Department of Atmospheric Science, Report No. 419, 97 pp.
+
+%Schubert, W. H., S. K. Cox, T. B. McKee, D. A. Randall, P. E. Ciesielski, J.
+%D. Kleist, and E. L. Stevens, 1992:  Analysis of Sounding Data from Porto
+%Santo Island During ASTEX. Colorado State University, Department of
+%Atmospheric Science, Report No. 512, 96 pp.
+
+%Schubert, W. H., J. S. Wakefield, E. J. Steiner and S. K. Cox, 1979a: Marine
+%stratocumulus convection. Part I: Governing equations and horizontally
+%homogeneous solutions. {\sl J.\ Atmos.\ Sci.}, {\bf 36}, 1286--1307.
+
+%Schubert, W. H., J. S. Wakefield, E. J. Steiner and S. K. Cox, 1979b: Marine
+%stratocumulus convection. Part II:  Horizontally inhomogeneous solutions.
+%{\sl J.\ Atmos.\ Sci.}, {\bf 36}, 1308--1324.
+
+%Shutts, G. J., 1980:  Angular momentum coordinates and their use in zonal,
+%geostrophic motion on a hemisphere. {\sl J. Atmos.\ Sci.}, {\bf 37},
+%1126--1132.
+
+%Wakefield, J. S., and W. H. Schubert, 1981:  Mixed-layer model simulation of
+%Eastern North Pacific stratocumulus.  {\sl Mon.\ Wea.\ Rev.}, {\bf 109},
+%1959--1968.
+
+\end{references}
+
+\end{document}
+
+\section{Dynamical adjustment of the trade inversion layer}
+
+\subsection{Experiment 1: dynamical extension of subtropical inversions into
+the tropics}
+
+     Using the results of an idealized adjustment problem we shall now
+illustrate how sharp inversions in the subtropics can be dynamically extended
+into the deep tropics.  For this idealized problem let us consider the initial
+wind field $u=v=0$.  Since there is no initial rotational flow, $\Phi=\phi$
+(or equivalently, $S=s$) and $\sigma^*=\sigma$ initially. Thus, we conclude
+from (18) that $\sigma^*(\Phi,\Theta,\infty)=\sigma(\phi,\theta,0)$, which can
+be substituted into the right hand side of (19).  For the initial mass field
+we choose
+  $$   \sigma(\phi,\theta,0) = \sigma_0 + \hat{\sigma} F(\theta)
+       \cases{   1           &   $ \phi_w \le \phi \le  \pi/2 $   \cr
+	         {1\over2}\left[1-\cos\left(\pi\phi/\phi_w\right)\right]
+                             &   $-\phi_w \le \phi \le  \phi_w$   \cr
+	         1           &   $-\pi/2  \le \phi \le -\phi_w$   \cr}
+                                                                \eqno(25) $$
+where
+$$   F(\theta) = -{(\theta_2-\theta_1)\over 2(\theta_T-\theta_B)}
+               + {1\over2}
+       \cases{   0           &   $\theta_2 \le \theta \le  \theta_T$      \cr
+	         1+\cos\left[\pi(2\theta-\theta_2-\theta_1)/
+                                        (\theta_2-\theta_1)\right]
+                             &   $\theta_1 \le \theta \le \theta_2$       \cr
+	         0           &   $\theta_B \le \theta \le \theta_1$       \cr}
+                                                                  \eqno(26) $$
+Note that the vertical integral of (26) from $\theta_B$ to $\theta_T$
+vanishes.
+The constants appearing in (25) and (26) are specified as follows: 
+$\theta_B=300$ K, $\theta_T=320$ K, $\theta_1=302$ K, $\theta_2=307$ K,
+$\sigma_0=4.5$ kPa K$^{-1}$, $\hat{\sigma}=-4.4$ kPa K$^{-1}$, and
+$\phi_w=\pi/9$. This choice of parameters results in a subtropical inversion
+layer centered near 825 mb with a maximum stability of
+$\partial T/\partial z=1.5$ Kkm$^{-1}$.
+
+     The $p(\phi,\theta)$ field at the initial state and the $p(\phi,\theta)$
+and $u(\phi,\theta)$ fields at the final adjusted state are shown in Fig.~8. 
+The same information on the mass field is displayed in $\theta(\phi,p)$ plots
+for the initial and final states in Fig.~9.  At the initial time there is an
+inversion layer just below 800 mb in the subtropics but no inversion near the
+equator.  This state is not in dynamic balance since there is no initial wind
+but a nonzero initial variation of $\theta$ on a $p$-surface (or,
+equivalently, an initial nonzero variation of $p$ on a $\theta$-surface).  To
+reach dynamic equilibrium a westerly flow at the inversion level near the
+equator is required.  The generation of such a westerly flow can be
+accomplished by the poleward shift of air parcels near 800 mb in the
+equatorial region.  By mass continuity and the adiabatic constraint, such
+poleward shifts tend to fill in isentropic layers in subtropical latitudes
+(decreasing the stability there) and evacuate isentropic layers near the
+equator (increasing the stability there).  The end result is the dynamical
+extension of the subtropical inversion into the tropical region.  The subtlety
+of this process is reflected in the weak zonal winds produced ($\leq$ 1.3
+ms$^{-1}$) and the small meridional parcel shifts involved (25 km poleward
+shift to produce
+1 ms$^{-1}$ westerly zonal flow at 15N).  Even though the zonal winds and
+meridional particle shifts are small, the effect on the static stability field
+is significant---a reflection of the general rule of dynamic adjustment of the
+mass field to the wind field in the tropical region. The lapse rates for the
+initial and final states at the equator and $30^\circ$ latitude are shown in
+Fig.~10.  The static stability in the inversion at $30^\circ$ latitude
+decreases while a meridionally extended stable layer appears at the equator.
+
+Varying the strength of the subtropical stable layer from -4 K/km to 5 K/km
+(results not shown) has only a minor effect on the zonal wind (+0.3 m/s at
+10N) and stability (+0.5 K/km at the equator).
+
+     It is possible to interpret this idealized experiment in a different
+sense.  Imagine convective and radiative processes which operate to sharpen
+the inversion at 800 mb in subtropical latitudes but not near the equator.  A
+sequence of slow dynamical adjustments then results in a poleward drift of
+equatorial air along isentropic surfaces extending into the developing
+inversion.  This tends to weaken the subtropical inversion and strengthen the
+tropical inversion, with the end result again being a dynamical extension of
+inversion structure into the deep tropics.
+
+
+\subsection{Experiment 2: adjustment of a sloping trade inversion layer}
+
+     Let us now consider a second idealized problem which illustrates the
+dynamical adjustments opposing the formation of sharp, sloping inversions in
+the tropics.  For this second problem let us also consider the initial
+condition $u=v=0$, so that again 
+$\sigma^*(\Phi,\Theta,\infty)=\sigma(\phi,\theta,0)$.  For this case we choose
+to specify $p(\phi,\theta,0)$, from which $\sigma(\phi,\theta,0)$ is easily
+calculated by differentiation.  The initial pressure field is given by
+  $$   p(\phi,\theta,0) = p_B - \sigma_0 (\theta-\theta_B) + \Delta p
+          \cases{1    &   $\theta_2(\phi) \le \theta \le \theta_T$       \cr
+	         G\left({\theta-\theta_1\over\theta_2-\theta_1}\right)
+		      &   $\theta_1(\phi) \le \theta \le \theta_2(\phi)$ \cr
+	         0    &   $\theta_B \le \theta \le \theta_1(\phi)$       \cr}
+                                                                  \eqno(27) $$
+where
+$$   \theta_1(\phi) = 303K +  4K\,
+       \cases{   0           &   $\phi_n \le \phi \le  \pi/2$       \cr
+                 G\left({\phi_n-\phi\over\phi_n}\right)
+                             &   $    0  \le \phi \le \phi_n$       \cr
+	         G\left({\phi_s-\phi\over\phi_s}\right)
+                             &   $\phi_s \le \phi \le    0  $       \cr
+	         0           &   $-\pi/2 \le \phi \le \phi_s$       \cr}
+                                                                  \eqno(28) $$
+with $\theta_2(\phi)=\theta_1(\phi)+3K$ and
+$ G(x)=\exp\left\{-(\gamma/x)\exp\left[1/(x-1)\right]\right\}$
+an interpolating function.  Note that $G(0)=0$, $G(1)=1$, and with the choice
+$\gamma={1\over2}\exp(2)\ln(2)$, $G({1\over2})={1\over2}$.  The constants
+appearing in (27) and (28) are specified as follows: $p_B=100$ kPa,
+$\theta_B=300$ K, $\theta_T=320$ K,
+$\sigma_0=4.5$ kPa K$^{-1}$, $\Delta p=5.0$ kPa, $\phi_s=-\pi/8$, 
+$\phi_n=\pi/8$.
+
+     The fields of $\theta(\phi,p)$ at the initial and final states are shown
+in Fig.~11. The corresponding zonal flows (not shown) are, as in the previous
+experiment (cf. Fig.~8), easterly above the inversion and westerly below the
+inversion. The final adjusted zonal winds are again weak, with the maximum
+values just exceeding 1 ms$^{-1}$.  On the $\theta=304$ K surface, equatorial
+air shifts poleward and fills mass into the flat subtropical inversion.  In
+contrast, on the $\theta=308$ K surface, air shifts equatorward and fills mass
+into the flat section of the equatorial inversion. On an intermediate surface,
+$\theta=306$ K say, air at $20^\circ$N and $20^\circ$S shifts equatorward
+while air at $5^\circ$N and $5^\circ$S shifts poleward, which fills mass into
+the sharp, sloping inversion.  The end result is a significant weakening of
+the flat section of the equatorial inversion near 650 mb, the formation of an
+equatorial inversion near 800 mb, and the destruction of the sharpness of the
+original sloping section of the inversion.  Note that it is not the overall
+slope of the trade inversion which is decreased during adjustment but rather
+the slope of each isentropic surface. The lapse rates for the initial and
+final
+states at the equator and $30^\circ$N are shown in Fig.~12. As in  experiment
+1, this shows that the stability increase at the equator near 800mb in the
+adjusted mass field is $\approx$20\% of the initial stability perturbation
+imposed in the subtropics.  Finally, it is worth noting that the equatorial
+stable layer is 25 mb higher than the subtropical stable layer, which yields a
+slope in approximate agreement with observations.
+
+     Another physical interpretation of these results is as follows.
+Attempts by equatorial diabatic processes to reset the inversion to a higher
+level are opposed, with the result that the higher inversion is weakened and
+the lower inversion is reestablished.  Of course, these results do not imply
+that it is impossible to form a sharp, sloping inversion in the deep tropics. 
+Rather, they imply that it is difficult or ``inefficient" to form sharp
+sloping inversions because of large scale dynamical constraints.
+
+\vfill
+\eject
+
+\section{Concluding remarks}
+
+     Through the use of a zonally symmetric model we have shown how the trade
+wind inversion layer can be viewed as a structure which is dynamically
+constrained to be more horizontally uniform than pure thermodynamical
+arguments would suggest.  The misconception generated by purely thermodynamic
+models of the horizontally homogeneous type is that the height of the trade
+inversion is controlled by the {\it local values} of sea-surface temperature,
+divergence and atmospheric temperature and moisture above the inversion.  The
+dynamical view brings in the notion that the trade inversion layer is strongly
+coupled horizontally.  Rapid variations in trade inversion height are
+dynamically smoothed.  In this way, the trade inversion height is controlled
+by horizontally averaged (over a Rossby length or more) values of the
+sea-surface temperature, divergence and above-inversion atmospheric structure.
+
+     It is sometimes argued that boundary layer processes can be parameterized
+in general circulation models in a purely thermodynamic manner, i.e., by
+appending equations which predict the boundary layer depth and thermodynamic
+structure.  Such arguments should be viewed with caution because the model may
+then have more vertical degrees of freedom in the mass field than the wind
+field.  This means that part of the mass field is out of control of the
+dynamical adjustment process.  Effects such as the ones we have discussed in
+this paper may then be improperly simulated.
+
+     From the observational results summarized in section 1, it is clear that
+additional research should be conducted with the goal of producing monthly or
+seasonal distributions of trade-wind inversion height over the entire tropical
+and subtropical regions.  New tools such as 915 MHz wind profilers are capable
+of continuously monitoring the trade inversion (Rogers et al.~1993) and could
+be used in such future studies.
+
+     Future theoretical and modeling research might involve the construction
+of trade-wind boundary layer theories which can be studied in a pure
+thermodynamic mode or a coupled dynamic/ther\-mo\-dy\-nam\-ic mode. 
+Comparison of the results from these two modes of model implementation would
+give better understanding of the basic concept presented here, i.e., the
+concept that dynamical coupling leads to a trade inversion height which is
+fairly uniform over the tropical and subtropical regions.
+
+%$\theta$-surfaces are like porous membranes of variable stiffness.
+
+
+\acknowledgments   This research was supported by the Office of Naval
+Research, under grant N00014-91-J-1422.
+
+%We wish to thank Richard Johnson for sharing with us his many physical %insights on tropical meteorology problems.
+
+\vfill
+\eject
+
+
+
+
+
+\beginreferences
+
+
+Albrecht, B. A., 1979:  A model for the thermodynamic structure of the
+trade-wind booundary layer. II: Applications.  {\sl J.\ Atmos.\ Sci.},
+{\bf 36}, 90--98.
+
+%Albrecht, B. A., 1981:  Parameterization of trade-cumulus cloud amount. 
+%{\sl J.\ Atmos.\ Sci.}, {\bf 38}, 73--89.
+
+Albrecht, B. A., 1984:  A model study of downstream variations of the
+thermodynamic structure of the trade winds.  {\sl Tellus},
+{\bf 36A}, 187--202.
+
+Albrecht, B. A., A. K. Betts, W. H. Schubert and S. K. Cox, 1979:  A model for
+the thermodynamic structure of the trade-wind boundary layer. I: Theoretical
+formulation and sensitivity tests.  {\sl J.\ Atmos.\ Sci.},
+{\bf 36}, 73--89.
+
+Augstein, E., H. Schmidt and F. Ostapoff, 1974: The vertical structure of the
+atmospheric planetary boundary layer in undisturbed trade winds over the
+Atlantic Ocean. {\sl Boundary-Layer Meteorology}, {\bf 6}, 129--150.
+
+Betts, A. K., 1973: Nonprecipitating cumulus convection and its
+parameterization. {\sl Quart.\ J.\ Roy.\ Meteor.\ Soc.}, {\bf 99}, 178--196.
+
+Betts, A. K., and B. A. Albrecht, 1987:  Conserved variable analysis of the
+convective boundary layer thermodynamic structure over the tropical oceans. 
+{\sl J.\ Atmos.\ Sci.}, {\bf 44}, 83--99.
+
+Bretherton, C. S., 1993:  Understanding Albrecht's model of trade cumulus
+cloud fields.  {\sl J.\ Atmos.\ Sci.}, {\bf 50}, 2264--2283.
+
+%Charney, J. G., and M. E. Stern, 1962:  On the stability of internal
+%baroclinic jets in a rotating atmosphere.  {\sl J. Atmos.\ Sci.}, {\bf 19},
+%159--172.
+
+%Eliassen, A., 1983: The Charney--Stern theorem on barotropic-baroclinic
+%instability.  {\sl Pure Appl.\ Geophys.}, {\bf 121}, 563--572.
+
+Ficker, H. von, 1936: Die passatinversion. {\sl Ver\"of.\ des Meteor.\ Inst.\
+der Univ.\ Berlin}, {\bf 1}, No.~4.
+
+Firestone, J. K., and B. A. Albrecht, 1986:  The structure of the atmospheric
+boundary layer in the central equatorial Pacific during January and February
+of FGGE.  {\sl Mon.\ Wea.\ Rev.}, {\bf 114}, 2219--2231.
+
+Gutnick, M., 1958: Climatology of the trade-wind inversion in the Caribbean.
+{\sl Bull.\ Amer.\ Meteor.\ Soc.}, {\bf 39}, 410--420.
+
+%Gutzler, D. S., 1993: Uncertainties in climatological tropical humidity %profiles: Some implications for estimating the greenhouse effect. {\sl J.\ %Climate}, {\bf 6}, 978--982.
+
+%Hack, J. J., and W. H. Schubert, 1990:  Some dynamical properties of idealized
+%thermally-forced meridional circulations in the tropics.  {\sl Meteorology and
+%Atmospheric Physics}, {\bf 44}, 101--117.
+
+%Hack, J. J.,  W. H. Schubert, D. E. Stevens and H.-C. Kuo, 1989:  Response of
+%the Hadley circulation to convective forcing in the ITCZ.
+%{\sl J.\ Atmos.\ Sci.}, {\bf 46}, 2957--2973.
+
+%Haraguchi, P. Y., 1968: Inversions over the tropical eastern Pacific Ocean.
+%{\sl Mon.\ Wea.\ Rev.}, {\bf 96}, 177--185.
+
+Holland, J. Z., and E. M. Rasmusson, 1973:  Measurements of the atmospheric
+mass, energy, and momentum budgets over a 500-kilometer square of tropical
+ocean.  {\sl Mon.\ Wea.\ Rev.}, {\bf 101}, 44--55.
+
+Hoskins, B. J., M. E. McIntyre and A. W. Robertson, 1985: On the use and
+significance of isentropic potential vorticity maps.
+{\sl Quart.\ J.\ R.\ Met.\ Soc.}, {\bf 111}, 877--946.
+
+%Johnson, R. H., 1993:  Midlatitude convective systems.  NCAR Colloquium on %Clouds and Climate.
+
+Johnson, R. H., J. F. Bresch, P. E. Ciesielski and W. A. Gallus, 1993: The
+TOGA/COARE atmospheric sounding array: Its performance and preliminary
+scientific results.  Preprints of the 20$^{\rm th}$ Conference on Hurricanes
+and Tropical Meteorology, San Antonio, Texas, Amer.\ Meteor.\ Soc., 1--4.
+
+Kloesel, K. A., and B. A. Albrecht, 1989:  Low-level inversions over the
+tropical Pacific---ther\-mo\-dy\-nam\-ic structure of the boundary layer and
+the above-inversion moisture structure. {\sl Mon.\ Wea.\ Rev.}, {\bf 117},
+87--101.
+
+Lilly, D. K., 1968:  Models of cloud-topped mixed layers under a strong
+inversion. {\sl Quart.\ J.\ Roy.\ Meteor.\ Soc.}, {\bf 94}, 292--309.
+
+%Magnusdottir, G., and W. H. Schubert, 1991:  Semigeostrophic theory on the
+%hemisphere. {\sl J. Atmos.\ Sci.}, {\bf 48}, 1449--1456.
+
+Nitta, T., and S. Esbensen, 1974: Heat and moisture budget analyses using
+BOMEX data.  {\sl Mon.\ Wea.\ Rev.}, {\bf 102}, 17--28.
+
+Ramage, C. S., S. J. S. Khalsa and B. N. Meisner, 1981:  The central Pacific
+near-equatorial convergence zone. {\sl J.\ Geophys.\ Res.}, {\bf 86},
+6580--6598.
+
+Randall, D. A., 1980: Entrainment into a stratocumulus layer with distributed
+radiative cooling. {\sl J. Atmos.\ Sci.}, {\bf 37}, 148--159.
+
+Rogers, R. R., W. L. Ecklund, D. A. Carter, K. S. Gage and S. A. Ethier, 1993:
+ Research applications of a boundary-layer wind profiler. {\sl Bull.\ Amer.\ 
+Meteor.\ Soc.}, {\bf 74}, 567--580.
+
+Sarachik, E. S., 1985: A simple theory for the vertical structure of the
+tropical atmosphere. {\sl PAGEOPH}, {\bf 123}, 261--271.
+
+Schubert, W. H., P. E. Ciesielski, D. E. Stevens and H.-C. Kuo, 1991:
+Potential vorticity modeling of the ITCZ and the Hadley circulation.
+{\sl J. Atmos.\ Sci.}, {\bf 48}, 1493--1509.
+
+Schubert, W. H., P. E. Ciesielski, T. B. McKee, J. D. Kleist, S. K. Cox, C. M.
+Johnson-Pasqua, and W. L. Smith Jr., 1987:  Analysis of Boundary Layer
+Sounding Data from the FIRE Marine Stratocumulus Project. Colorado State
+University, Department of Atmospheric Science, Report No. 419, 97 pp.
+
+Schubert, W. H., S. K. Cox, T. B. McKee, D. A. Randall, P. E. Ciesielski, J.
+D. Kleist, and E. L. Stevens, 1992:  Analysis of Sounding Data from Porto
+Santo Island During ASTEX. Colorado State University, Department of
+Atmospheric Science, Report No. 512, 96 pp.
+
+Schubert, W. H., J. S. Wakefield, E. J. Steiner and S. K. Cox, 1979a: Marine
+stratocumulus convection. Part I: Governing equations and horizontally
+homogeneous solutions. {\sl J.\ Atmos.\ Sci.}, {\bf 36}, 1286--1307.
+
+Schubert, W. H., J. S. Wakefield, E. J. Steiner and S. K. Cox, 1979b: Marine
+stratocumulus convection. Part II:  Horizontally inhomogeneous solutions.
+{\sl J.\ Atmos.\ Sci.}, {\bf 36}, 1308--1324.
+
+%Shutts, G. J., 1980:  Angular momentum coordinates and their use in zonal,
+%geostrophic motion on a hemisphere. {\sl J. Atmos.\ Sci.}, {\bf 37},
+%1126--1132.
+
+Wakefield, J. S., and W. H. Schubert, 1981:  Mixed-layer model simulation of
+Eastern North Pacific stratocumulus.  {\sl Mon.\ Wea.\ Rev.}, {\bf 109},
+1959--1968.
+
+
+\endreferences
+
+
+\begincaptions
+
+
+Fig. 1. Cumulative frequency (percent) of lapse rates greater than $-4$ K
+km$^{-1}$ (solid curve), $0$ K km$^{-1}$ (dashed curve) and $4$ K km$^{-1}$
+(dotted curve).
+
+Figure 2.  Sounding statistics for 70 high resolution radiosonde soundings at 
+San Nicolas Island ($33.3^\circ$N, $119.6^\circ$W) from 30 June to 20 July
+1987 in a format identical to Fig.~1.
+
+Figure 3. Height (m) of the base of the trade-wind inversion over the
+Atlantic,  as determined from data obtained during the 1925--27 Meteor I
+expedition. (From von Ficker 1936).
+
+Figure 4. Height (m) of the base of the trade-wind inversion over the
+Caribbean for April.  The map is based on the tabular data of Gutnick (1958).
+
+Figure 5.  Mean north-south cross section of saturation equivalent potential
+temperature (degrees Celsius) near $165^\circ$W based on dropwindsonde
+soundings taken between 15 January and 20 February 1979.  The dashed curve
+indicates the inversion height based on the minimum saturation equivalent
+potential temperature.  (From Firestone and Albrecht 1986).
+
+Figure 6.  Sounding statistics for Kwajelein ($8.7^\circ$N, $167.7^\circ$E),
+in a format identical to Fig.~1.
+
+Figure 7. Schematic north-south cross section depicting a steeply sloped trade
+inversion (dashed line).
+
+Figure 8. Results for experiment 1: (a) isoline of $p(\phi,\theta)$ for the
+initial unbalanced state: (b) isolines of $p(\phi,\theta)$ and
+$u(\phi,\theta)$
+for the final balanced state. Solid wind contours indicate westerly flow,
+dashed contours easterly flow, with a contour interval of 0.25 ms$^{-1}$.
+
+Figure 9. Results for experiment 1: (a) isolines of $\theta(\phi,p)$ for the
+initial unbalanced state;
+(b) isolines of $\theta(\phi,p)$ for the final balanced state.
+
+Figure 10.  Lapse rate $\partial T/\partial z$ as a function of pressure for
+the initial state (solid curves) and the final adjusted state (dashed curves)
+at the equator (panel a) and at $30^\circ$ latitude (panel b) for experiment
+1.  Initially there is a stable layer at $30^\circ$ latitude but not at the
+equator.  In the final state the stable layer has been dynamically extended to
+the equator.
+
+Figure 11. Same as in Fig.~9, but for experiment 2.
+
+Figure 12. Same as in Fig.~10, but for experiment 2.
+
+\endcaptions
+
+
+
+
+\bye
+
+********  Extra Pieces  ****************
+
+     Kloesel and Albrecht (1989) studied approximately 1200 dropwindsonde
+soundings taken between 5S and 15N during 15 January--20 February 1979 (FGGE
+SOP I) and 10 May--8 June 1979 (FGGE SOP II).  They concluded that the mean
+trade inversion over the eastern Pacific has an inversion top at 800 mb and a
+base at 850 mb, and that there is little latitudinal or longitudinal variation
+in the height of the inversion.  These conclusions are consistent with the
+earlier dropwindsonde study of Firestone and Albrecht (1986), who used a
+smaller dataset, and with the aircraft study of Ramage et al.\ (1981).
+
+
+
+    To express the invertibility principle in terms of $p$ we differentiate
+(8) with respect to $\theta$ and use the thermal wind equation to obtain
+  $$  {\partial \over a\cos\phi\partial\phi}
+       \left({\Gamma\cos\phi\over\hat{f}}{\partial p\over
+a\partial\phi}\right)
+       + P {\partial^2 p \over\partial\theta^2}
+       = \sigma {\partial P \over \partial\theta},       \eqno(12{\rm a}) $$
+with boundary conditions
+  $$  p=p_T \;\;\; {\rm at} \;\;\;\theta = \theta_T,     \eqno(12{\rm b}) $$
+  $$  \theta_B{\sin\phi\over\cos^3\phi}{\partial\over a\partial\phi}
+       \left({\Gamma\cos^3\phi\over\sin\phi}{\partial p
+                                             \over a\partial\phi}\right)
+      + \hat{f}P{\partial p \over \partial\theta}=
+       -4\Omega^2\sin^2\phi
+       \; \; \; {\rm at} \; \; \;\theta = \theta_B,      \eqno(12{\rm c}) $$
+  $$    {\partial p \over \partial\phi} = 0
+       \;\;\;{\rm at}\;\;\;\phi =\pm{\pi\over2}.         \eqno(12{\rm d}) $$
+
+
+      To express the invertibility principle in terms of $M$ we multiply (9)
+by $(\cos^3\phi)/(\sin\phi)$ and differentiate with respect to $\phi$ to
+obtain
+  $$  {\sin\phi \over \cos^3\phi}{\partial \over a\partial\phi}
+       \left({\cos^3\phi\over\sin\phi}{\partial M \over a\partial\phi}\right)
+       + {\hat{f}P \over\Gamma}{\partial^2 M \over\partial\theta^2}
+       = -4\Omega^2\sin^2\phi,                           \eqno(13{\rm a}) $$
+with boundary conditions
+  $$ {\partial M \over \partial\theta}=\Pi_T
+       \;\;\; {\rm at} \;\;\;\theta = \theta_T,          \eqno(13{\rm b}) $$
+  $$ {\partial M \over \partial\theta}={M\over\theta_B}
+       \; \; \; {\rm at} \; \; \;\theta = \theta_B,      \eqno(13{\rm c}) $$
+  $$    {\partial M \over \partial\phi} = 0
+       \;\;\;{\rm at}\;\;\;\phi =\pm{\pi\over2}.         \eqno(13{\rm d}) $$
+
+
+
+     To express the invertibility principle in terms of $p$ we differentiate
+(8) with respect to $\Theta$ and use the thermal wind equation to obtain
+  $$  {\partial \over a\cos\Phi\partial\Phi}
+       \left({\Gamma\cos\Phi\over\hat{f}}{\partial p\over
+a\partial\Phi}\right)
+       + P {\partial^2 p \over\partial\Theta^2}
+       = {\partial \sigma^*2\Omega\sin\phi \over \partial\Theta},
+                                                         \eqno(12{\rm a}) $$
+with boundary conditions
+  $$  p=p_T \;\;\; {\rm at} \;\;\;\Theta = \Theta_T,     \eqno(12{\rm b}) $$
+  $$  \theta_B{\sin\phi\over\cos^3\phi}{\partial\over a\partial\phi}
+       \left({\Gamma\cos^3\phi\over\sin\phi}{\partial p
+                                             \over a\partial\phi}\right)
+      + \hat{f}P{\partial p \over \partial\theta}=
+       -4\Omega^2\sin^2\phi
+       \; \; \; {\rm at} \; \; \;\Theta = \Theta_B,      \eqno(12{\rm c}) $$
+  $$    {\partial p \over \partial\Phi} = 0
+       \;\;\;{\rm at}\;\;\;\Phi =\pm{\pi\over2}.         \eqno(12{\rm d}) $$
+
+\section{Solutions of the potential pseudodensity equation for melting layer
+forcing}
+
+     Let us consider the case where $\dot{\theta}$ is independent of time and
+has a spatial dependence given by
+  $$   \dot{\Theta}(S,\Theta) = -Q(S)
+         \cases{1+\cos(\pi Z)   & $-1 \le Z \le 1$  \cr
+                0               &  otherwise        \cr}           \eqno(1) $$
+where $Z=(2\Theta-\Theta_2-\Theta_1)/(\Theta_2-\Theta_1)$, $\Theta_1$ and 
+$\Theta_2$ are constants, and $Q(S)$ is the latitudinal distribution of the
+heating.  Note that, since
+$(\Theta_2-\Theta_1)^{-1}\int_{\Theta_1}^{\Theta_2}\dot{\Theta}
+d\Theta=-Q(S)$, we can regard $-Q(S)$ as the vertically averaged value of
+$\dot{\Theta}$ in the melting layer.  Multiplying () by $\dot{\theta}$ we
+obtain
+  $$  {\partial(\dot{\theta}\sigma^*) \over \partial\tau}
+    - \left[1 + \cos(\pi Z)\right]
+     {\partial(\dot{\theta}\sigma^*) \over \partial Z} = 0,
+                                                                   \eqno(2) $$
+where $\tau=2Q(S)T/(\Theta_2-\Theta_1)$.
+
+According to (2) the quantity $\dot{\theta}\sigma^*$ is constant along each
+characteristic curve determined from $-dZ/[1+\cos(\pi Z)]=d\tau$.
+By integration of this equation we can show that the characteristic through
+the point $(Z,\tau)$ intersects the $\tau=0$ axis at a level $Z_0(Z,\tau)$
+determined by $\pi Z_0(Z,\tau)=2\tan^{-1}[\pi\tau+\tan({1\over2}\pi Z)]$. 
+Since $\dot{\theta}\sigma^*$ is constant along each characteristic, its value
+at $(Z,\tau)$ must equal its value at $(Z_0,0)$, which results in
+  $$  \sigma^*(Z,\tau) = \sigma_0
+      \left({1 + \cos\{2\tan^{-1}[\pi\tau+\tan(\textstyle{{1\over2}}\pi Z)]\} 
+       \over 1 + \cos(\pi Z)}\right).
+                                                                   \eqno(3) $$
+For the latitudinal distribution of the cooling due to melting we choose the
+form
+  $$   Q(S) = {4\alpha Q_0 \over \pi^{1/2}}
+              \left({\exp[-\alpha^2(S-S_c)^2] \over
+              {\rm erf}[\alpha(1+S_c)] + {\rm erf}[\alpha(1-S_c)]}\right),
+                                                                   \eqno(4) $$
+where $S_c$ and $\alpha$ are parameters which control the latitude and width
+of the convective zone.  Because of the way the product $Q(S)T$ appears in the
+definition of $\tau$, it is not necessary to choose $Q_0$.  The solution can
+simply be obtained for different values of $Q_0T$.  However, for purposes of
+physical interpretation let us choose $Q_0=0.30$ K day$^{-1}$, along with
+$\Theta_B=300$ K and $\Theta_T=360$ K.
+
+\centerline{Uniqueness of the physically acceptable solution to the
+invertibility principle}
+
+     Assume that the solutions ${\cal M}_1$ and ${\cal M}_2$ exist and that
+both solutions satisfy the invertibility principle () and its boundary
+conditions ().
+  $$   A {\partial^2{\cal M}_d \over \partial S^2}
+     +2B {\partial^2{\cal M}_d \over \partial S^2}
+     + C {\partial^2{\cal M}_d \over \partial\Theta^2} = 0,
+                                                           \eqno({\rm A}.1) $$
+
+      To express the invertibility principle in terms of ${\cal M}$ we
+multiply (9) by $(\cos^3\phi)/(\sin\phi)$ and differentiate with respect to
+$\phi$ to obtain
+  $$ \eqalignno{ \left[4\Omega^2\sin^2\Phi
+                 &-{\sin\Phi \over \cos\Phi}{\partial \over a\partial\Phi}
+       \left({\cos^2\phi\over\cos\Phi\sin\Phi}
+                       {\partial{\cal M}' \over a\partial\Phi}\right)\right]
+       \left[\bar{\Gamma}\bar{\sigma}
+                      -{\partial^2{\cal M}'\over\partial\Theta^2}\right] \cr	 
+     &- \left({\partial^2{\cal M}' \over a\partial\Phi\partial\Theta}\right)
+         {\partial\over\partial\Theta}\left({\cos^2\phi\over\cos^2\Phi}
+	         {\partial{\cal M}' \over a\partial\Phi}\right)
+       = \Gamma\sigma^* 4\Omega^2\sin\Phi\sin\phi, &(13{\rm a}) \cr} $$
+with boundary conditions
+  $$ {\partial{\cal M}'\over\partial\Theta}=0
+       \;\;\; {\rm at} \;\;\;\Theta = \Theta_T,          \eqno(13{\rm b}) $$
+  $$ {\partial {\cal M}' \over \partial\Theta}={M'\over\Theta_B}
+       \; \; \; {\rm at} \; \; \;\Theta = \Theta_B,      \eqno(13{\rm c}) $$
+  $$    {\partial {\cal M} \over \partial\Phi} = 0
+       \;\;\;{\rm at}\;\;\;\Phi =\pm{\pi\over2}.         \eqno(13{\rm d}) $$
+
+  $$ {\partial s \over \partial S}
+     {\partial^2 {\cal M} \over \partial\Theta^2}
+   - {\partial s \over \partial\Theta}
+     {\partial^2 {\cal M} \over \partial S \partial\Theta}
+   + \Gamma \sigma^* = 0,                                \eqno(19{\rm a}) $$
+  $$ 2\Omega^2 a^2 S
+      \left({s^2-S^2 \over 1-s^2}\right)
+     + {\partial {\cal M} \over \partial S} = 0.         \eqno(19{\rm b}) $$
+Equations (14a--b) constitute the desired relation between ${\cal M}$, $s$
+and $\sigma^*$.   For boundary conditions we choose
+  $$ {\partial {\cal M} \over \partial\Theta}=\Pi_T \; \; \; {\rm at} \; \; \;
+            \Theta = \Theta_T,    \qquad
+      \Theta {\partial {\cal M} \over \partial \Theta} - {\cal M}
+      + {\Omega^2 a^2 (s^2-S^2)^2 \over 2(1-s^2)} = 0
+       \; \; \; {\rm at} \; \; \;\Theta = \Theta_B,      \eqno(14{\rm c}) $$
+  $$    s = 1 \;\;\;{\rm at}\;\;\;S = 1,   \qquad
+        s =-1 \;\;\;{\rm at}\;\;\;S =-1.                 \eqno(14{\rm d}) $$
+Equation (14c) results from assuming that the upper isentropic surface
+$\Theta = \Theta_T$ is also an isobaric surface with Exner function $\Pi_T$.
+The lower boundary condition results from assuming the geopotential vanishes
+on the lower isentropic surface $\Theta = \Theta_B$, so that $M = \Theta \Pi$
+there.  Then, expressing $M$ in terms of ${\cal M}$ and $s$, we can write
+the lower boundary condition as (14c).  For the boundary conditions at the
+poles, symmetry requires the conditions (14d).
+
+     To isolate the dynamically significant portion of ${\cal M}$ we proceed
+as follows.  We define $\bar{\Pi}$, $\bar{\Gamma}$, $\bar{\sigma}$ and
+$\bar{\cal M}$ by
+  $$   \bar{\Pi} = c_p \left({\bar{p} \over p_0}\right)^\kappa, \qquad
+       \bar{\Gamma} = {d\bar{\Pi} \over d\bar{p}}
+                    = {\kappa\bar{\Pi}\over\bar{p}},            \qquad
+       \bar{\sigma} = - {d\bar{p} \over d\Theta},               \qquad
+       \bar{\cal M} = \Theta_B\bar{\Pi}_B
+                    + \int_{\Theta_B}^\Theta \bar{\Pi}d\Theta',           $$
+with $\bar{p}$ given by
+  $$   \bar{p}(\Theta) = p_T  + {\textstyle{1\over2}}
+       \int_\Theta^{\Theta_T}\int_{-\pi/2}^{\pi/2}
+         \sigma^* \cos\Phi\,d\Phi\,d\Theta'.
+	                                                        \eqno(14) $$
+  $$ {\partial s \over \partial S}
+     {\partial^2 {\cal M} \over \partial\Theta^2}
+   - {\partial s \over \partial\Theta}
+     {\partial^2 {\cal M} \over \partial S \partial\Theta}
+   + \Gamma \sigma^* = 0,                                \eqno(14{\rm a}) $$
+  $$ 2\Omega^2 a^2 S
+      \left({s^2-S^2 \over 1-s^2}\right)
+     + {\partial {\cal M} \over \partial S} = 0,         \eqno(14{\rm b}) $$
+where $\Gamma=\kappa\Pi/p$.
+Equations (3.14a--b) constitute the desired relation between ${\cal M}$, $s$
+and $\sigma^*$.   For boundary conditions we choose
+  $$ {\partial {\cal M}' \over \partial\Theta}=0 \; \; \; {\rm at} \; \; \;
+            \Theta = \Theta_T,                           \eqno(14{\rm c}) $$
+  $$  \Theta {\partial {\cal M} \over \partial \Theta} - {\cal M}
+      + {\Omega^2 a^2 (s^2-S^2)^2 \over 2(1-s^2)} = 0
+       \; \; \; {\rm at} \; \; \;\Theta = \Theta_B,      \eqno(14{\rm d}) $$
+  $$    s = 1 \;\;\;{\rm at}\;\;\;S = 1,                 \eqno(14{\rm e}) $$
+  $$    s =-1 \;\;\;{\rm at}\;\;\;S =-1.                 \eqno(14{\rm f}) $$
+
+
+
+
+
+
+ For the initial mass field we choose
+  $$   \sigma(\phi,\theta,0) = \sigma_0 + \hat{\sigma}
+               \left[1-e^{-(\phi/\phi_w)^2}\right] F(\theta),     \eqno(25) $$
+where
+$$   F(\theta) = -{(\theta_2-\theta_1)\over 2(\theta_T-\theta_B)}
+               + {1\over2}
+       \cases{   0           &   $\theta_2 \le \theta \le  \theta_T$      \cr
+	         1+\cos\left[\pi(2\theta-\theta_2-\theta_1)/
+                                        (\theta_2-\theta_1)\right]
+                             &   $\theta_1 \le \theta \le \theta_2$       \cr
+	         0           &   $\theta_B \le \theta \le \theta_1$       \cr}
+                                                                  \eqno(26) $$
+Note that the vertical integral of (26) from $\theta_B$ to $\theta_T$
+vanishes.
+The constants appearing in (25) and (26) are specified as follows: 
+$\theta_B=300$ K, $\theta_T=320$ K, $\theta_1=306$ K, $\theta_2=310$ K,
+$\sigma_0=2.8$ kPa K$^{-1}$, $\hat{\sigma}=-2.0$ kPa K$^{-1}$, and $\phi_w=20$
+degrees.
+
+
+    In one-dimensional thermodynamic models of stratocumulus (e.g., Wakefield
+and Schubert 1981, Albrecht 1984) and shallow cumulus (e.g., Albrecht et al.\
+1979, Albrecht 1979, Bretherton 1993) the equilibrium trade wind boundary
+layer depth is determined by a balance between the radiative and moist
+convective processes tending to deepen the layer and the large-scale
+subsidence tending to shallow the layer.  These pure thermodynamic models
+predict a deepening boundary layer along trajectories moving toward the ITCZ
+over increasing sea surface temperature and decreasing large-scale subsidence.
+
+     In possession of concepts like these, it is natural to construct
+schematic cross sections such as that shown in Fig.~7, which depicts the trade
+inversion as rising from very near the sea surface in the subtropics to
+midtroposphere  near the edge of the ITCZ.  Evidence that such depictions are
+inconsistent with observations has been provided by
+
+      Three theoretical views of the trade inversion are as follows.  The
+first considers the trade inversion as a pure thermodynamical phenomenon which
+can be modeled using steady state, horizontally homogeneous assumptions.  This
+view leads to the notion that the boundary layer depth and thermodynamic
+structure are controlled by local values of sea surface temperature and
+large-scale divergence.  The second view also involves pure thermodynamical,
+steady state arguments, but recognizes the importance of horizontal
+inhomogeneities.  In this view, horizontal advection is important and
+entrainment can occur not only by large-scale subsidence but also by
+horizontal flow across a sloping inversion.  This view leads to the notion
+that the boundary layer depth and thermodynmic structure are controlled by a
+weighted average of the sea surface temperature and large-scale divergence
+upstream along the trajectory. The third view involves combined
+dynamical/thermodynamical arguments.
+
+
+
