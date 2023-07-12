@@ -16,7 +16,7 @@ GLIBsmooth = -lplotf -dashsmooth
 FFLAGS = -u
 
 invtc: $(OBJ)
-	ncargf77 $(OBJ) $(FFLAGS) $(LIBS) $(GLIBsmooth) -o $@
+	ncargfcc $(OBJ) $(FFLAGS) $(LIBS) $(GLIBsmooth) -o $@
 
 .F.f :
 	/lib/cpp -C -P $(CPPFLAGS) $< > $*.f
