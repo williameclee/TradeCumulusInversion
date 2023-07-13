@@ -7,7 +7,6 @@ SINGLE_OR_DOUBLE         = "double precision"
 #SINGLE_OR_DOUBLE        = "real"
 
 FC = ncargcc
-CPPFLAGS = -DSINGLE_OR_DOUBLE=$(SINGLE_OR_DOUBLE)
 OBJ =	$(SRC1:.F=.o)  $(SRC2:.f=.o)
 
 LIBS = -lslatec
@@ -20,11 +19,11 @@ invtc: $(OBJ)
 	ncargcc $(OBJ) $(FFLAGS) $(LIBS) $(GLIBsmooth) -o $@
 
 .F.f :
-	/lib/cpp -C -P $(CPPFLAGS) $< > $*.f
+	/lib/cpp -C -P $< > $*.f
 
 inv.f : $(SRC1) $(SRC2)
 	cat $(SRC1) $(SRC2)  > temp
-	/lib/cpp -C -P $(CPPFLAGS) temp $@
+	/lib/cpp -C -P temp $@
 	rm temp
 
 invtci.f : invtci.F
