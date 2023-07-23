@@ -1,4 +1,4 @@
-      subroutine intdde( method, n, h, u0, f, u )
+subroutine intdde( method, n, h, u0, f, u )
 c
       integer  method, n
       real h, u0, f(0:n), u(0:n)

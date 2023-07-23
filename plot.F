@@ -1,4 +1,4 @@
-      subroutine plot(x, sigma, theta, z, phimin, phimax, 
+subroutine plot(x, sigma, theta, z, phimin, phimax, 
      2                scs, sc, ptop, time)
       integer  jc, kc, kcp, jc2, jtot, jl, nwk, nwkz, ne
       parameter (kc = 60,  kcp=kc+1)
@@ -209,7 +209,7 @@ c
 c     call pltpl(u,p,jc2,jtot,kc,pmin,pmax,tb,tt,time,jmin,jplt)
       return
       end
-      subroutine xtranf(fpl, fl, jc2, kc, plat, lat, jl,
+subroutine xtranf(fpl, fl, jc2, kc, plat, lat, jl,
      2           wk, nwk, dp, jtot)
 c
 c   routine to transform fields from potential latitude to actual   

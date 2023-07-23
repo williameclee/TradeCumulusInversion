@@ -4,6 +4,8 @@ c
 c     This program uses a newton iteration to solve the invertibility
 c     equation for the trade cumulus inversion problem.
 c
+      use intdde
+      
       integer  jc, jt, kc, kcp, kcm, jl
       parameter (kc = 60,  kcp=kc+1, kcm=kc-1)
       parameter (jc = 81, jt=2*jc-1, jl=60)
@@ -155,7 +157,7 @@ c
 c        write(7,*) j, phid(j), theta1(j), theta2(j)
    25 continue
 c           
-c   initialize pressure, gamma and x (i.e., m) at even points
+c   initialise pressure, gamma and x (i.e., m) at even points
 c
       do 30  k=0,kc
          do 28  j=-jc,jc
