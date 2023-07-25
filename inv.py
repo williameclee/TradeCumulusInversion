@@ -23,7 +23,7 @@ def intdde(method, n, h, u0, f):
     return u
 
 
-def int(x, sc, ntim):
+def intp(x, sc, ntim):
     # interpolate values to latitude space
     jc2 = jc // 2
 
@@ -76,9 +76,10 @@ def fexp(x):
 
 
 def gtdmsf(m, n, B, D, T, inc, jump):
+    inc = int(inc)
     # Compute the factorisations
-    l1 = 0
-    l2 = l1 + (m - 1) * jump
+    l1 = int(0)
+    l2 = int(l1 + (m - 1) * jump)
     for k in range(1, n):
         l1 += inc
         l2 += inc

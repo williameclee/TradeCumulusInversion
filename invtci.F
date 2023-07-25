@@ -536,7 +536,7 @@ c   close workstation
 c   
 	call clsgks
 c
-	end
+end
 	subroutine int(x, sc, convd, ntim)
 c
 c   routine to interpolate values to latitude space
