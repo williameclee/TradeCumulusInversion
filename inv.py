@@ -76,6 +76,9 @@ def fexp(x):
 
 
 def gtdmsf(m, n, B, D, T, inc, jump):
+    # B = np.array(B)
+    # D = np.array(D)
+    # T = np.array(T)
     inc = int(inc)
     # Compute the factorisations
     l1 = int(0)
@@ -90,6 +93,10 @@ def gtdmsf(m, n, B, D, T, inc, jump):
 
 
 def gtdmss(m, n, B, D, T, X, inc, jump):
+    # B = np.array(B)
+    # D = np.array(D)
+    # T = np.array(T)
+    # X = np.array(X)
     # Do the forward substitutions
     l1 = 0
     l2 = l1 + (m - 1) * jump
