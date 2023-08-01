@@ -75,43 +75,31 @@ def fexp(x):
     return fexp_val
 
 
-def gtdmsf(m, n, B, D, T, inc, jump):
-    # B = np.array(B)
-    # D = np.array(D)
-    # T = np.array(T)
-    inc = int(inc)
-    # Compute the factorisations
-    l1 = int(0)
-    l2 = int(l1 + (m - 1) * jump)
+def gtdmsf(B, D, T):
+    n = B.shape[0]
     for k in range(1, n):
-        l1 += inc
-        l2 += inc
-        for l in range(l1, l2 + 1, jump):
-            B[l] = B[l] / D[l - inc]
-            D[l] = D[l] - B[l] * T[l - inc]
+        B[k,:] = B[k,:] / D[k-1,:]
+        D[k,:] = D[k,:] - B[k,:] * T[k-1,:]
     return B, D, T
 
 
-def gtdmss(m, n, B, D, T, X, inc, jump):
-    # B = np.array(B)
-    # D = np.array(D)
-    # T = np.array(T)
-    # X = np.array(X)
+def gtdmss(B, D, T, X):
+    n = B.shape[0]
     # Do the forward substitutions
-    l1 = 0
-    l2 = l1 + (m - 1) * jump
     for k in range(1, n):
-        l1 += inc
-        l2 += inc
-        for l in range(l1, l2 + 1, jump):
-            X[l] = X[l] - B[l] * X[l - inc]
-
+        X[k,:] = X[k,:] - B[k,:] * X[k-1,:]
     # Do the backward substitutions
-    for l in range(l1, l2 + 1, jump):
-        X[l] = X[l] / D[l]
-    for k in range(n - 1, 0, -1):
-        l1 -= inc
-        l2 -= inc
-        for l in range(l1, l2 + 1, jump):
-            X[l] = (X[l] - T[l] * X[l + inc]) / D[l]
+    X[-1,:] = X[-1,:] / D[-1,:]
+    for k in range(n - 2, -1, -1):
+        X[k,:] = (X[k,:] - T[k,:] * X[k+1,:]) / D[k,:]
+    return X
+
+def gtm(D,L,U,R,n):
+    A = np.zeros((n, n))
+    d_i, d_j = np.diag_indices_from(A)
+    A[d_i, d_j] = D
+    A[d_i[:-1] + 1, d_j[:-1]] = L[1:]
+    A[d_i[:-1], d_j[:-1] + 1] = U[:-1]
+
+    X = np.matmul(np.linalg.inv(A),R)
     return X
