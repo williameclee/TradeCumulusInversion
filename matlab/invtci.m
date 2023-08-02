@@ -50,3 +50,12 @@ initialiseVariables
 
 %% Visualise initial field
 plot_InitialField
+
+%% Iteration
+iterateSolution
+
+%% Update boundary
+[X, Pres, Gamma, ape, dif] = updateBoundary(X, Pres, Gamma, pref, eps, DZ, alpha, beta, kappa, Su, F1);
+
+%% Visualise final field
+plot_FinalField

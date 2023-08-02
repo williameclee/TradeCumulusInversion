@@ -22,6 +22,7 @@ Pres(theta_T) = Pres(theta_T) + Dp;
 Pres(theta_C) = Pres(theta_C) ...
     + Dp * fexp((Theta_pad(theta_C) - theta1_mesh(theta_C)) / thetac);
 Pres = Pres / pb;
+pref = mean(Pres, 1);
 Gamma = Pres .^ (kappa - 1);
 
 %% M and Phil
@@ -36,7 +37,7 @@ end
 X(2:2:end - 1, 1) = X(2:2:end - 1, 3) - 2 * DZ * X(2:2:end - 1, 2) / beta;
 X(2:2:end - 1, end) = X(2:2:end - 1, end - 2) + 2 * DZ * (1 - alpha) ^ kappa / (kappa * alpha);
 
-X(1:2:end, :) = repmat(Sl(1:2:end).', [1, Kt]);
+X(1:2:end, :) = repmat(Su(1:2:end), [1, Kt]);
 
 %% Sigma
 tinc = 0.1;
@@ -55,7 +56,7 @@ for j = 1:Jt
         fp = (tp - theta1(j)) / (theta2(j) - theta1(j));
         fm = (tm - theta1(j)) / (theta2(j) - theta1(j));
         dfdt = (fp - fm) / (2 * tinc);
-        Sigma(j, k) = (sigma0 - dp * dfdt) / sigma0;
+        Sigma(j, k) = (sigma0 - Dp * dfdt) / sigma0;
     end
 
 end

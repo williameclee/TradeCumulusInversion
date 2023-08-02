@@ -39,8 +39,8 @@ def s_hor(xold, x, k, fac1, scs):
         xs = xold**2
         gkp = fac1[2:-1:2] * ((xs - scs[2:-1:2]) / (1 - xs)) + x[2::2, k] - x[:-1:2, k]
         gkpp = fac1[2:-1:2] * 2 * xold * (1 - scs[2:-1:2]) / (1 - xs) ** 2
-        xnew = xold - gkp / gkpp
-    return xnew
+        xold = xold - gkp / gkpp
+    return xold
 
 def m_correction(x, pres, jc, kc, dz, tdz, alpha, beta, eps, kappa, scs):
     # compute a corrected m field
