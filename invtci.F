@@ -258,7 +258,7 @@ c
 	read  *, nup
 	print *,'Frequency to print residual at: ',nup
 c   do "niter" newton iteration at every sweep
-	niter = 1
+	niter = 4
 	n  = 0
 80	n  = n + 1
 	if (n .gt. nmax) go to 300
@@ -310,9 +310,9 @@ c	 		using sin(phi)=sin(Phi)=1 for boundary condition at north pole
 				jp = j+1  
 				dxds  = x(jp,k)-x(jm,k)
 				dxdz2 = x(j,kp)-2.*x(j,k)+x(j,km)
-				f2	= x(jp,k)+x(jm,k)
-				f3	= 1. - 0.25*f2*f2
-				f4	= (0.25*(x(jp,kp)+x(jm,kp)-x(jp,km)-x(jm,km)))**2
+				f2 = x(jp,k)+x(jm,k)
+				f3 = 1. - 0.25*f2*f2
+				f4 = (0.25*(x(jp,kp)+x(jm,kp)-x(jp,km)-x(jm,km)))**2
 				term2 = f1(j)*f4*(1. + 0.75*f2*f2)/(f3*f3*f3)
 				u(j,k)=  dxdz2 + term2
 				d(j,k)= -2.*dxds
@@ -332,7 +332,7 @@ c
 				d(j,k) = fac1(j)*(2.*x(j,k)*(1.-scs(j))/(dj*dj))
 				u(j,k) = 1.
 				g(j,k) = -(fac1(j)*(fj/dj) + x(jp,k) - x(jm,k))
-			110	continue 
+			110	continue
 		150	continue
 c
 c		do matrix factorization
@@ -354,7 +354,7 @@ c
 			do 170  j=-jc+1,jc-1
 				x(j,k) = x(j,k) + g(j,k)
 		170	continue
-		if(iter .lt. niter) go to 100 
+		if(iter .lt. niter) go to 100
 	200	continue
 c
 c   *************** compute the residual *******************************
@@ -382,10 +382,10 @@ c
 		jp = j + 1
 		x(j,kcp) = x(j,kc)
 		do 215 itr=1,4
-			xold	 = x(j,kcp)
-			xs	 = xold*xold
+			xold = x(j,kcp)
+			xs = xold*xold
 			gkp	= fac1(j)*((xs-scs(j))/(1.-xs)) + x(jp,kcp) - x(jm,kcp)
-			gkpp	 = fac1(j)*2.*xold*(1.-scs(j)) / (1.-xs)**2
+			gkpp = fac1(j)*2.*xold*(1.-scs(j)) / (1.-xs)**2
 			x(j,kcp) = xold - gkp/gkpp
 		215	continue
 	220 continue
@@ -443,30 +443,30 @@ c
 			if(j .eq. -jc+1) then
 				sum = sum + pres(j,k)*(x(j+1,k)+1.)
 			else if(j .eq. jc-1) then
-			sum = sum + pres(j,k)*(1.-x(j-1,k))
+				sum = sum + pres(j,k)*(1.-x(j-1,k))
 			else
-			sum = sum + pres(j,k)*(x(j+1,k)-x(j-1,k))
+				sum = sum + pres(j,k)*(x(j+1,k)-x(j-1,k))
 			endif
 c		 sum = sum + pres(j,k)*(sc(j+1)-sc(j-1))
 		240	continue
 		avep = 0.5 * sum 
 		dif  = avep - refp(k)
 		if(k .eq. 0) avepb = avep
-			sum = 0.0
-			do 242  j=-jc+1,jc-1,2
-				pres(j,k)  = pres(j,k) - dif
-				if(j .eq. -jc+1) then
-					sum = sum + pres(j,k)*(x(j+1,k)+1.)
-				else if(j .eq. jc-1) then
-					sum = sum + pres(j,k)*(1.-x(j-1,k))
-				else
-					sum = sum + pres(j,k)*(x(j+1,k)-x(j-1,k))
-				endif
+		sum = 0.0
+		do 242  j=-jc+1,jc-1,2
+			pres(j,k)  = pres(j,k) - dif
+			if(j .eq. -jc+1) then
+				sum = sum + pres(j,k)*(x(j+1,k)+1.)
+			else if(j .eq. jc-1) then
+				sum = sum + pres(j,k)*(1.-x(j-1,k))
+			else
+				sum = sum + pres(j,k)*(x(j+1,k)-x(j-1,k))
+			endif
 c				sum = sum + pres(j,k)*(sc(j+1)-sc(j-1))
-				gamma(j,k) = pres(j,k)**(kappa-1.)
-			242	continue
-			avep = 0.5 * sum 
-			dif = avep - refp(k)
+			gamma(j,k) = pres(j,k)**(kappa-1.)
+		242	continue
+		avep = 0.5 * sum 
+		dif = avep - refp(k)
 c	  write(7,*) 'iteration = ', n, avep, refp(k), dif
 	245 continue
 c
@@ -537,7 +537,7 @@ c
 	call clsgks
 c
 end
-	subroutine int(x, sc, convd, ntim)
+subroutine int(x, sc, convd, ntim)
 c
 c   routine to interpolate values to latitude space
 c
@@ -599,8 +599,8 @@ c
    60 continue
    70 continue
 	return
-	end
-	subroutine traj(phimin, phimax, tmin, tmax)
+end
+subroutine traj(phimin, phimax, tmin, tmax)
 	integer  jl, kc, madx, mady, midx, midy, nsdx, nsdy
 	parameter (jl=60, kc=60)
 c
@@ -674,8 +674,8 @@ c	  call curved(x, y, 2)
 	go to 70
   500 continue
 	return
-	end
-	subroutine spx(f, x, jj, kk, xe, je, wk, nwk, d, fe)
+end
+subroutine spx(f, x, jj, kk, xe, je, wk, nwk, d, fe)
 c
 c   routine to spline fit a field (f) as a function of independent
 c   variable (x) and then evaluate the field at points xe and
@@ -702,4 +702,4 @@ c
 	 2		   ne, xe, fe(-je,k), ierr)
    20 continue
 	return
-	end
+end
