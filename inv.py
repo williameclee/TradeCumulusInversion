@@ -75,31 +75,37 @@ def fexp(x):
     return fexp_val
 
 
-def gtdmsf(B, D, T):
-    n = B.shape[0]
-    for k in range(1, n):
-        B[k,:] = B[k,:] / D[k-1,:]
-        D[k,:] = D[k,:] - B[k,:] * T[k-1,:]
-    return B, D, T
+def pmean(p, x):
+    pref = np.sum((p[1:] + p[:-1]) * (x[1:] - x[:-1]) / 2)
+    pref = pref / 2
+    return pref
 
 
-def gtdmss(B, D, T, X):
-    n = B.shape[0]
-    # Do the forward substitutions
-    for k in range(1, n):
-        X[k,:] = X[k,:] - B[k,:] * X[k-1,:]
-    # Do the backward substitutions
-    X[-1,:] = X[-1,:] / D[-1,:]
-    for k in range(n - 2, -1, -1):
-        X[k,:] = (X[k,:] - T[k,:] * X[k+1,:]) / D[k,:]
-    return X
+# def gtdmsf(B, D, T):
+#     n = B.shape[0]
+#     for k in range(1, n):
+#         B[k,:] = B[k,:] / D[k-1,:]
+#         D[k,:] = D[k,:] - B[k,:] * T[k-1,:]
+#     return B, D, T
 
-def gtm(D,L,U,R,n):
-    A = np.zeros((n, n))
-    d_i, d_j = np.diag_indices_from(A)
-    A[d_i, d_j] = D
-    A[d_i[:-1] + 1, d_j[:-1]] = L[1:]
-    A[d_i[:-1], d_j[:-1] + 1] = U[:-1]
 
-    X = np.matmul(np.linalg.inv(A),R)
-    return X
+# def gtdmss(B, D, T, X):
+#     n = B.shape[0]
+#     # Do the forward substitutions
+#     for k in range(1, n):
+#         X[k,:] = X[k,:] - B[k,:] * X[k-1,:]
+#     # Do the backward substitutions
+#     X[-1,:] = X[-1,:] / D[-1,:]
+#     for k in range(n - 2, -1, -1):
+#         X[k,:] = (X[k,:] - T[k,:] * X[k+1,:]) / D[k,:]
+#     return X
+
+# def gtm(D,L,U,R,n):
+#     A = np.zeros((n, n))
+#     d_i, d_j = np.diag_indices_from(A)
+#     A[d_i, d_j] = D
+#     A[d_i[:-1] + 1, d_j[:-1]] = L[1:]
+#     A[d_i[:-1], d_j[:-1] + 1] = U[:-1]
+
+#     X = np.matmul(np.linalg.inv(A),R)
+#     return X
