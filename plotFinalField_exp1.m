@@ -49,7 +49,7 @@ ylabel('Pressure [hPa]', "FontSize", 11)
 box on
 set(gca, "Ydir", "reverse", "YScale", "log", "Layer", "top")
 set(gcf, "Position", [10 10 440 240], "Color", "w")
-export_fig(gcf, 'Figures/exp2_theta_initial', "-pdf", "-nocrop", "-nofontswap", "-painters")
+% export_fig(gcf, 'Figures/exp2_theta_initial', "-pdf", "-nocrop", "-nofontswap", "-painters")
 
 figure(2)
 clf
@@ -77,45 +77,45 @@ ylabel('Pressure [hPa]', "FontSize", 11)
 box on
 set(gca, "Ydir", "reverse", "YScale", "log", "Layer", "top")
 set(gcf, "Position", [10 250 440 240], "Color", "w")
-export_fig(gcf, 'Figures/exp2_theta_final', "-pdf", "-nocrop", "-nofontswap", "-painters")
+% export_fig(gcf, 'Figures/exp2_theta_final', "-pdf", "-nocrop", "-nofontswap", "-painters")
 
-figure(3)
-clf
-set(gca, "Box", "on", "LineWidth", 1, "FontSize", 9)
-hold on
-plot(DTDH0(82, 3:end - 2), Pres0_intp(82, 3:end - 2), ...
-    "Color", "k", "LineWidth", 0.5, "DisplayName", 'initial')
-plot(DTDH(82, 3:end - 2), Pres_intp(82, 3:end - 2), ...
-    "Color", "k", "LineWidth", 0.5, "Linestyle", "--", "DisplayName", 'final')
-hold off
-legend("show", "Box", "off", "FontSize", 11, "Location", "southeast")
-xlim([-10, 5])
-ylim([600, 1000])
-yticks([600, 750, 850, 900, 950, 1000])
-xlabel('Lapse rate [K/km]', "FontSize", 11)
-ylabel('Pressure [hPa]', "FontSize", 11)
-box on
-set(gca, "Ydir", "reverse", "YScale", "log", "Layer", "top")
-set(gcf, "Position", [450 10 160 240], "Color", "w")
-export_fig(gcf, 'Figures/exp2_lapserate_0', "-pdf", "-nocrop", "-nofontswap", "-painters")
+% figure(3)
+% clf
+% set(gca, "Box", "on", "LineWidth", 1, "FontSize", 9)
+% hold on
+% plot(DTDH0(82, 3:end - 2), Pres0_intp(82, 3:end - 2), ...
+%     "Color", "k", "LineWidth", 0.5, "LineStyle", "--", "DisplayName", 'initial')
+% plot(DTDH(82, 3:end - 2), Pres_intp(82, 3:end - 2), ...
+%     "Color", "k", "LineWidth", 0.5, "DisplayName", 'final')
+% hold off
+% legend("show", "Box", "off", "FontSize", 11, "Location", "southeast")
+% xlim([-10, 5])
+% ylim([600, 1000])
+% yticks([600, 750, 850, 900, 950, 1000])
+% xlabel('Lapse rate [K/km]', "FontSize", 11)
+% ylabel('Pressure [hPa]', "FontSize", 11)
+% box on
+% set(gca, "Ydir", "reverse", "YScale", "log", "Layer", "top")
+% set(gcf, "Position", [450 10 200 240], "Color", "w")
+% export_fig(gcf, 'Figures/exp2_lapserate_0', "-pdf", "-nocrop", "-nofontswap", "-painters")
 
-figure(4)
-clf
-set(gca, "Box", "on", "LineWidth", 1, "FontSize", 9)
-hold on
-plot(DTDH0(41, 3:end - 2), Pres0_intp(41, 3:end - 2), ...
-    "Color", "k", "LineWidth", 0.5, "DisplayName", 'initial')
-plot(DTDH(41, 3:end - 2), Pres_intp(41, 3:end - 2), ...
-    "Color", "k", "LineWidth", 0.5, "Linestyle", "--", "DisplayName", 'final')
-hold off
-legend("show", "Box", "off", "FontSize", 11, "Location", "southeast")
-xlim([-10, 5])
-ylim([600, 1000])
-yticks([600, 750, 850, 900, 950, 1000])
-xlabel('Lapse rate [K/km]', "FontSize", 11)
-ylabel('Pressure [hPa]', "FontSize", 11)
-ylabel('Pressure [hPa]', "FontSize", 11)
-box on
-set(gca, "Ydir", "reverse", "YScale", "log", "Layer", "top")
-set(gcf, "Position", [450 250 160 240], "Color", "w")
-export_fig(gcf, 'Figures/exp2_lapserate_30', "-pdf", "-nocrop", "-nofontswap", "-painters")
+% figure(4)
+% clf
+% set(gca, "Box", "on", "LineWidth", 1, "FontSize", 9)
+% hold on
+% plot(DTDH0(41, 3:end - 2), Pres0_intp(41, 3:end - 2), ...
+%     "Color", "k", "LineWidth", 0.5, "Linestyle", "--", "DisplayName", 'initial')
+% plot(DTDH(41, 3:end - 2), Pres_intp(41, 3:end - 2), ...
+%     "Color", "k", "LineWidth", 0.5, "DisplayName", 'final')
+% hold off
+% legend("show", "Box", "off", "FontSize", 11, "Location", "southeast")
+% xlim([-10, 5])
+% ylim([600, 1000])
+% yticks([600, 750, 850, 900, 950, 1000])
+% xlabel('Lapse rate [K/km]', "FontSize", 11)
+% ylabel('Pressure [hPa]', "FontSize", 11)
+% ylabel('Pressure [hPa]', "FontSize", 11)
+% box on
+% set(gca, "Ydir", "reverse", "YScale", "log", "Layer", "top")
+% set(gcf, "Position", [450 250 200 240], "Color", "w")
+% export_fig(gcf, 'Figures/exp2_lapserate_30', "-pdf", "-nocrop", "-nofontswap", "-painters")

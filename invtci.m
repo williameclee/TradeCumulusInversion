@@ -1,4 +1,7 @@
-% Experiment dimension
+clear all
+clc
+
+% Experiment dimensions
 K = 61;
 J = 81;
 Jt = 2 * J + 1;
@@ -13,26 +16,14 @@ Ae = 6371e3;
 Omega = 7.292e-5;
 rom = Ae * Omega;
 
-% Experiment parameters
+% Default model parameters
 thetat = 320; % theta (kelvin) at model top
 thetab = 300; % theta (kelvin) at model bottom
-sigma0 = 45; % sigma0 (hPa/K)
+sigma0 = 45 * 100; % sigma0 (Pa/K)
+pb = 1000 * 100; % pressure (Pa) at model bottom
 
-pb = 1000; % pressure (hPa) at model bottom
-Dp = 58; % pressure (hPa) change across inversion
-theta10 = 303; % mean theta (kelvin) in inversion
-Dtheta = 4; % dtheta (kelvin) of inversion
-thetac = 3; % thetac (kelvin) of inversion
+initialiseParameters_exp2
 
-phis = -30; % southern extent of inversion (degrees)
-phin = 30; % northern extent of inversion (degrees)
-phic = 0; % latitude (degrees) of inversion center
-
-Dp = Dp * 100; % pressure (Pa) change across inversion
-pb = pb * 100; % pressure (Pa) at model bottom
-sigma0 = sigma0 * 100; % sigma0 (Pa/K)
-
-pt = pb - sigma0 * (thetat - thetab) + Dp;
 alpha = (pb - pt) / pb;
 beta = thetab / (thetat - thetab);
 cs = alpha * R * (thetat - thetab);
@@ -41,4 +32,4 @@ eps = 4 * rom ^ 2 / cs;
 initialiseCoordinates
 initialiseVariables_exp2
 iterateSolution
-% plotFinalField_exp2
+plotFinalField_exp2
