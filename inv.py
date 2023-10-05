@@ -2,25 +2,35 @@ import numpy as np
 from scipy.interpolate import interp1d
 
 
-def intdde(method, n, h, u0, f):
-    u = np.zeros(n + 1)
-    # u = np.zeroslike(f)
+# def intdde(n, h, u0, f):
+#     u = np.zeros(n + 1)
+#     # u = np.zeroslike(f)
 
-    if method == 1:  # Cubic Interpolation
-        hby24 = h / 24
-        u[0] = u0
-        u[1] = u0 + hby24 * (9.0 * f[0] + 19 * f[1] - 5 * f[2] + f[3])
-        for i in range(2, n):
-            u[i] = u[i - 1] + hby24 * (-f[i - 2] + 13 * (f[i - 1] + f[i]) - f[i + 1])
-        u[n] = u[n - 1] + hby24 * (f[n - 3] - 5 * f[n - 2] + 19 * f[n - 1] + 9 * f[n])
-    else:  # Trapezoidal Rule
-        hby2 = 0.5 * h
-        u[0] = u0
+#     # if method == 1:  # Cubic Interpolation
+#     hby24 = h / 24
+#     u[0] = u0
+#     u[1] = u0 + hby24 * (9.0 * f[0] + 19 * f[1] - 5 * f[2] + f[3])
+#     for i in range(2, n):
+#         u[i] = u[i - 1] + hby24 * (-f[i - 2] + 13 * (f[i - 1] + f[i]) - f[i + 1])
+#     u[n] = u[n - 1] + hby24 * (f[n - 3] - 5 * f[n - 2] + 19 * f[n - 1] + 9 * f[n])
+#     # else:  # Trapezoidal Rule
+#     #     hby2 = 0.5 * h
+#     #     u[0] = u0
 
-        for i in range(1, n + 1):
-            u[i] = u[i - 1] + hby2 * (f[i - 1] + f[i])
+#     #     for i in range(1, n + 1):
+#     #         u[i] = u[i - 1] + hby2 * (f[i - 1] + f[i])
 
-    return u
+#     return u
+
+def intdde(Fp, F0,Dx):
+    F = np.zeros_like(Fp)
+    hby24 = Dx / 24
+    F[0] = F0
+    F[1] = F0 + hby24 * (9.0 * Fp[0] + 19 * Fp[1] - 5 * Fp[2] + Fp[3])
+    for i in range(2, F.shape[0] - 1):
+        F[i] = F[i - 1] + hby24 * (-Fp[i - 2] + 13 * (Fp[i - 1] + Fp[i]) - Fp[i + 1])
+    F[-1] = F[-2] + hby24 * (Fp[-4] - 5 * Fp[-3] + 19 * Fp[-2] + 9 * Fp[-1])
+    return F
 
 
 def intp(x, sc, ntim):
