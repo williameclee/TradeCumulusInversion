@@ -1,10 +1,10 @@
-X = updateBoundary_M(X, eps, DZ, Y, alpha, beta, kappa);
+X = updateBoundary_M(X, Y, DZ, eps, alpha, beta, kappa);
 X = updateBoundary_s(X, Y, fac1);
 [Pres, Gamma, ape, dif] = correction_Gamma(Pres, Gamma, X, pref, DZ, alpha, kappa);
 X = correction_M(X, Pres, DZ, alpha, kappa);
-X = updateBoundary_M(X, eps, DZ, Y, alpha, beta, kappa);
+X = updateBoundary_M(X, Y, DZ, eps, alpha, beta, kappa);
 
-function X = updateBoundary_M(X, eps, DZ, Y, alpha, beta, kappa)
+function X = updateBoundary_M(X, Y, DZ, eps, alpha, beta, kappa)
     M_int = 2:2:size(X, 1) - 1;
     % top
     X(M_int, end) = X(M_int, end - 2) ...

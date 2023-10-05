@@ -1,3 +1,5 @@
+export = false;
+
 %% Intepolate to full domain
 M_int = 2:2:Jt - 1;
 s_int = 3:2:Jt - 2;
@@ -23,9 +25,7 @@ DTDH(:, 3:end - 2) = (T(:, 4:end - 1) - T(:, 2:end - 3)) ./ ...
 DTDH0(:, 3:end - 2) = (T0(:, 4:end - 1) - T0(:, 2:end - 3)) ./ ...
     (R * T0(:, 3:end - 2) / gr .* log(Pres0_intp(:, 2:end - 3) ./ Pres0_intp(:, 4:end - 1))) * 1000;
 
-
 %% Plot
-CustomColour
 figure(1)
 clf
 set(gca, "Box", "on", "LineWidth", 1, "FontSize", 9)
@@ -36,7 +36,7 @@ contour(phi_intp, Pres0_intp, Th_pad, ...
     300:1:311, "LineColor", "k", "LineWidth", 0.5)
 hold off
 cbar = colorbar("Box", "on", "LineWidth", 1, "FontSize", 9);
-colormap(ccmap.coolwarm)
+% colormap()
 clim([300, 311])
 ylabel(cbar, 'Potential temperature [K]', "FontSize", 11)
 xlim([phis, phin])
@@ -49,7 +49,10 @@ ylabel('Pressure [hPa]', "FontSize", 11)
 box on
 set(gca, "Ydir", "reverse", "YScale", "log", "Layer", "top")
 set(gcf, "Position", [10 10 440 240], "Color", "w")
-export_fig(gcf, 'Figures/exp2_theta_initial', "-pdf", "-nocrop", "-nofontswap", "-painters")
+
+if export
+    export_fig(gcf, 'Figures/exp2_theta_initial', "-pdf", "-nocrop", "-nofontswap", "-painters")
+end
 
 figure(2)
 clf
@@ -64,7 +67,7 @@ contour(phi_intp, Pres_intp, Th_pad, ...
 clabel(C, h, -1:0.2:1)
 hold off
 cbar = colorbar("Box", "on", "LineWidth", 1, "FontSize", 9);
-colormap(ccmap.coolwarm)
+% colormap()
 clim([300, 311])
 ylabel(cbar, 'Potential temperature [K]', "FontSize", 11)
 xlim([phis, phin])
@@ -77,7 +80,10 @@ ylabel('Pressure [hPa]', "FontSize", 11)
 box on
 set(gca, "Ydir", "reverse", "YScale", "log", "Layer", "top")
 set(gcf, "Position", [10 250 440 240], "Color", "w")
-export_fig(gcf, 'Figures/exp2_theta_final', "-pdf", "-nocrop", "-nofontswap", "-painters")
+
+if export
+    export_fig(gcf, 'Figures/exp2_theta_final', "-pdf", "-nocrop", "-nofontswap", "-painters")
+end
 
 figure(3)
 clf
@@ -97,7 +103,10 @@ ylabel('Pressure [hPa]', "FontSize", 11)
 box on
 set(gca, "Ydir", "reverse", "YScale", "log", "Layer", "top")
 set(gcf, "Position", [450 10 160 240], "Color", "w")
-export_fig(gcf, 'Figures/exp2_lapserate_0', "-pdf", "-nocrop", "-nofontswap", "-painters")
+
+if export
+    export_fig(gcf, 'Figures/exp2_lapserate_0', "-pdf", "-nocrop", "-nofontswap", "-painters")
+end
 
 figure(4)
 clf
@@ -118,4 +127,7 @@ ylabel('Pressure [hPa]', "FontSize", 11)
 box on
 set(gca, "Ydir", "reverse", "YScale", "log", "Layer", "top")
 set(gcf, "Position", [450 250 160 240], "Color", "w")
-export_fig(gcf, 'Figures/exp2_lapserate_30', "-pdf", "-nocrop", "-nofontswap", "-painters")
+
+if export
+    export_fig(gcf, 'Figures/exp2_lapserate_30', "-pdf", "-nocrop", "-nofontswap", "-painters")
+end
