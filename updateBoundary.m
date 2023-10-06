@@ -1,10 +1,10 @@
-X = updateBoundary_M(X, Y, DZ, eps, alpha, beta, kappa);
+X = updateBoundary_M(X, Y, DZ, alpha, beta, eps, kappa);
 X = updateBoundary_s(X, Y, fac1);
-[Pres, Gamma, ape, dif] = correction_Gamma(Pres, Gamma, X, pref, DZ, alpha, kappa);
-X = correction_M(X, Pres, DZ, alpha, kappa);
-X = updateBoundary_M(X, Y, DZ, eps, alpha, beta, kappa);
+[Pres, Gamma, pmean, dif] = correction_Gamma(X, DZ, Pres, Gamma, pref, alpha, kappa);
+X = correction_M(X, DZ, Pres, alpha, kappa);
+X = updateBoundary_M(X, Y, DZ, alpha, beta, eps, kappa);
 
-function X = updateBoundary_M(X, Y, DZ, eps, alpha, beta, kappa)
+function X = updateBoundary_M(X, Y, DZ, alpha, beta, eps, kappa)
     M_int = 2:2:size(X, 1) - 1;
     % top
     X(M_int, end) = X(M_int, end - 2) ...
@@ -34,29 +34,29 @@ function X = updateBoundary_s_Iter(X, Y, fac1, k)
     end
 
     for it = 1:4
-        Gkp = fac1(Sl_int) .* (Xold .^ 2 - Y(Sl_int) .^ 2) ./ (1 - Xold .^ 2) ...
+        Gkp = fac1(Sl_int) ...
+            .* (Xold .^ 2 - Y(Sl_int) .^ 2) ./ (1 - Xold .^ 2) ...
             + X(Sl_int + 1, k) - X(Sl_int - 1, k);
-        Gkpp = fac1(Sl_int) * 2 .* Xold .* (1 - Y(Sl_int) .^ 2) ./ ((1 - Xold .^ 2) .^ 2);
+        Gkpp = fac1(Sl_int) * 2 .* Xold ...
+            .* (1 - Y(Sl_int) .^ 2) ./ ((1 - Xold .^ 2) .^ 2);
         X(Sl_int, k) = Xold - Gkp ./ Gkpp;
+        Xold = X(Sl_int, k);
     end
-
-    X(Sl_int, k) = Xold;
-
 end
 
-function [Pres, Gamma, ape, dif] = correction_Gamma(Pres, Gamma, X, pref, DZ, alpha, kappa)
+function [Pres, Gamma, pmean, dif] = correction_Gamma(X, DZ, Pres, Gamma, pref, alpha, kappa)
     M_int = 2:2:size(X, 1) - 1;
 
     Pres(M_int, 3:end - 2) = (alpha * kappa * (X(M_int, 4:end - 1) - X(M_int, 2:end - 3)) / (2 * DZ)) .^ (1 / kappa);
-    ape = sum(Pres(M_int, :) .* (X(M_int + 1, :) - X(M_int - 1, :)), 1) / 2;
-    dif = ape - pref;
+    pmean = sum(Pres(M_int, :) .* (X(M_int + 1, :) - X(M_int - 1, :)), 1) / 2;
+    dif = pmean - pref;
     Pres(M_int, 2:end - 1) = Pres(M_int, 2:end - 1) - dif(2:end - 1);
     Gamma(M_int, 2:end - 1) = Pres(M_int, 2:end - 1) .^ (kappa - 1);
-    ape = sum(Pres(M_int, :) .* (X(M_int + 1, :) - X(M_int - 1, :)), 1) / 2;
-    dif = ape - pref;
+    pmean = sum(Pres(M_int, :) .* (X(M_int + 1, :) - X(M_int - 1, :)), 1) / 2;
+    dif = pmean - pref;
 end
 
-function X = correction_M(X, Pres, DZ, alpha, kappa)
+function X = correction_M(X, DZ, Pres, alpha, kappa)
     Jt = size(X, 1);
 
     for j = 2:2:Jt - 1
