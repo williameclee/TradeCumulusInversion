@@ -6,15 +6,19 @@ s_int = 3:2:Jt - 2;
 
 s_intp = X;
 s_intp(M_int, :) = (X(M_int - 1, :) + X(M_int + 1, :)) / 2;
-phi_intp = rad2deg(asin(s_intp));
-Phi_intp = rad2deg(asin(YY));
 M_intp = X;
 M_intp(s_int, :) = (X(s_int - 1, :) + X(s_int + 1, :)) / 2;
-Pres_intp = Pres;
-Pres_intp(s_int, :) = (Pres(s_int - 1, :) + Pres(s_int + 1, :)) / 2;
-Pres_intp = Pres_intp * pb / 100;
-Pres0_intp = Pres0 * pb / 100;
-u = Omega * Ae * ((sin(deg2rad(phi_intp))) .^ 2 - (sin(deg2rad(Phi_intp))) .^ 2) ./ (cos(deg2rad(phi_intp)));
+Pres_intp = Pres* pb / 100;
+Pres_intp(s_int, :) = (Pres_intp(s_int - 1, :) + Pres_intp(s_int + 1, :)) / 2;
+Pres0_intp = Pres0* pb / 100;
+Pres0_intp(s_int, :) = (Pres0_intp(s_int - 1, :) + Pres0_intp(s_int + 1, :)) / 2;
+
+phi_intp = asind(s_intp);
+Phi_intp = asind(YY);
+
+u = Omega * Ae ...
+    * ((sind(phi_intp)) .^ 2 - (sind(Phi_intp)) .^ 2) ...
+    ./ (cosd(phi_intp));
 u = imgaussfilt(u, 1);
 T = Th_pad .* (Pres_intp / (pb / 100)) .^ kappa;
 T0 = Th_pad .* (Pres0_intp / (pb / 100)) .^ kappa;

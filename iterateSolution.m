@@ -1,4 +1,4 @@
-for n = 1:100
+for n = 1:800
 
     for kz = 2:3
 
@@ -35,6 +35,6 @@ for n = 1:100
 
     end
 
-    % updateBoundary
+    updateBoundary
 
 end
